@@ -6,17 +6,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="js/aframe.min.js"></script>
+    <script src="js/aframe-look-at-component.min.js"></script>
+    <script src="js/ava.js"></script>
         <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
-    <a-scene>
+    <a-scene id="avascene">
         <a-assets>
             <img id="bg" src="imgs/bg.jpg">
+            <img id="alder" src="imgs/alder.png">
+            <img id="birch" src="imgs/birch.png">
+            <img id="hazel" src="imgs/hazel.png">
+            <img id="pine" src="imgs/pine.png">
+            <img id="meadowsweet" src="imgs/meadowsweet.png">
+            <img id="bracken" src="imgs/bracken.png">
             <img id="ground" src="imgs/floor.jpg">
         </a-assets>
+        <a-entity id="cam" camera look-controls wasd-controls>
+            <a-entity cursor position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="color: black; shader: flat"></a-entity>
+        </a-entity>
         <a-sky src="#bg"></a-sky>
-        <a-plane src="#ground" height="75" width="75" position="0 -3 0" rotation="-90 0 0"></a-plane>
+        <a-plane src="#ground" height="150" width="150" position="0 -10 0" rotation="-90 0 0"></a-plane>
     </a-scene>
     </body>
 
