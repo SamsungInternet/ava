@@ -12,21 +12,26 @@ AFRAME.registerSystem('ava-environment', {
         numClouds:{type:'number', default:10}},
     init: function(){
         this.generateClouds(this.data.numClouds);
-        this.generateFlora(this.data.numPlants);
+        this.generateFlora(this.data.numPlants, false);
+        this.generateFlora(this.data.numPlants, true);
         this.playBGSound();
     },
-    generateFlora: function(num){
+    generateFlora: function(num, weed){
         for(i = 0; i < num; i++){
-            var p = Math.floor(getRandomArbitrary(0, _plantInfo.length));
+            var sp = (weed)? 4 : 0;
+            var ep = (weed)? _plantInfo.length: 3;
+            var p = Math.floor(getRandomArbitrary(sp, ep));
             var t = document.createElement('a-image');
             t.setAttribute('src', '#' + _plantInfo[p].name);
             t.setAttribute('width', getRandomArbitrary(_plantInfo[p].width[0], _plantInfo[p].width[1]));
             var th = getRandomArbitrary(_plantInfo[p].height[0], _plantInfo[p].height[1]);
             t.setAttribute('height', th);
-            var py = (th/2)-.3;
-            t.setAttribute('position', getRandomArbitrary(-60, 60) + ' ' + py + ' ' +getRandomArbitrary(-60, 60));
+            var py = (th/2);
+            plantPos = (weed)? 20:200;
+            t.setAttribute('position', getRandomArbitrary(-plantPos, plantPos) + ' ' + py + ' ' +getRandomArbitrary(-plantPos, plantPos));
             t.setAttribute('look-at', '#cam');
             this.el.appendChild(t);
+            console.log(getRandomArbitrary(-weed, weed));
         }
     },
     generateClouds: function(num){
