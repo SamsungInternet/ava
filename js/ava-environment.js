@@ -9,7 +9,7 @@ const _plantInfo = [{name:'alder', height:[15,20], width:[5,7]},
 AFRAME.registerSystem('ava-environment', {
     schema:{
         numPlants:{type:'number', default:20},
-        numClouds:{type:'number', default:6}},
+        numClouds:{type:'number', default:10}},
     init: function(){
         this.generateClouds(this.data.numClouds);
         this.generateFlora(this.data.numPlants);
@@ -36,7 +36,8 @@ AFRAME.registerSystem('ava-environment', {
             c.setAttribute('src', '#cloud' + t);
             c.setAttribute('width', getRandomArbitrary(5, 20));
             c.setAttribute('height', getRandomArbitrary(5, 10));
-            c.setAttribute('position', getRandomArbitrary(-60, 60) + ' ' + 30 + ' ' +getRandomArbitrary(-60, 60));
+            var ch = getRandomArbitrary(30, 50);
+            c.setAttribute('position', getRandomArbitrary(-60, 60) + ' ' + ch + ' ' +getRandomArbitrary(-60, 60));
             c.setAttribute('rotation', '-90 0 0');
             this.el.appendChild(c);
         }
