@@ -21,7 +21,7 @@ AFRAME.registerSystem('ava-environment', {
             t.setAttribute('width', getRandomArbitrary(_plantInfo[p].width[0], _plantInfo[p].width[1]));
             var th = getRandomArbitrary(_plantInfo[p].height[0], _plantInfo[p].height[1]);
             t.setAttribute('height', th);
-            var py = th/2;
+            var py = (th/2)-.3;
             t.setAttribute('position', getRandomArbitrary(-60, 60) + ' ' + py + ' ' +getRandomArbitrary(-60, 60));
             t.setAttribute('look-at', '#cam');
             this.el.appendChild(t);
