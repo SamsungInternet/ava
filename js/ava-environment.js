@@ -34,10 +34,10 @@ AFRAME.registerSystem('ava-environment', {
             var  t = Math.round(Math.random());
             var c = document.createElement('a-image');
             c.setAttribute('src', '#cloud' + t);
-            c.setAttribute('width', getRandomArbitrary(20, 40));
-            c.setAttribute('height', getRandomArbitrary(20, 40));
+            c.setAttribute('width', getRandomArbitrary(5, 25));
+            c.setAttribute('height', getRandomArbitrary(5, 25));
             var ch = getRandomArbitrary(40, 70);
-            c.setAttribute('position', getRandomArbitrary(-60, 60) + ' ' + ch + ' ' +getRandomArbitrary(-60, 60));
+            c.setAttribute('position', getRandomArbitrary(-200, 200) + ' ' + ch + ' ' +getRandomArbitrary(-200, 200));
             //c.setAttribute('rotation', '-90 0 0');
             c.setAttribute('look-at', '#cam');
             this.el.appendChild(c);
