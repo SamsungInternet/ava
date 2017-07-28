@@ -8,8 +8,10 @@ const _plantInfo = [{name:'alder', height:[15,20], width:[5,7]},
 
 AFRAME.registerSystem('ava-environment', {
     schema:{
-        numPlants:{type:'number', default:20}},
+        numPlants:{type:'number', default:20},
+        numClouds:{type:'number', default:6}},
     init: function(){
+        this.generateClouds(this.data.numClouds);
         this.generateFlora(this.data.numPlants);
         this.playBGSound();
     },
@@ -25,6 +27,18 @@ AFRAME.registerSystem('ava-environment', {
             t.setAttribute('position', getRandomArbitrary(-60, 60) + ' ' + py + ' ' +getRandomArbitrary(-60, 60));
             t.setAttribute('look-at', '#cam');
             this.el.appendChild(t);
+        }
+    },
+    generateClouds: function(num){
+        for(i = 0; i < num; i++){
+            var  t = Math.round(Math.random());
+            var c = document.createElement('a-image');
+            c.setAttribute('src', '#cloud' + t);
+            c.setAttribute('width', getRandomArbitrary(5, 20));
+            c.setAttribute('height', getRandomArbitrary(5, 10));
+            c.setAttribute('position', getRandomArbitrary(-60, 60) + ' ' + 30 + ' ' +getRandomArbitrary(-60, 60));
+            c.setAttribute('rotation', '-90 0 0');
+            this.el.appendChild(c);
         }
     },
     playBGSound: function(){
