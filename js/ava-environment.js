@@ -10,6 +10,7 @@ AFRAME.registerSystem('ava-environment', {
         numPlants:{type:'number', default:20}},
     init: function(){
         this.generateFlora(this.data.numPlants);
+        this.playBGSound();
     },
     generateFlora: function(num){
         for(i = 0; i < num; i++){
@@ -24,5 +25,12 @@ AFRAME.registerSystem('ava-environment', {
             t.setAttribute('look-at', '#cam');
             this.el.appendChild(t);
         }
+    },
+    playBGSound: function(){
+        var bgSound = document.getElementById('ambient');
+        var src = audioCtx.createMediaElementSource(bgSound);
+        src.connect(audioCtx.destination);
+        bgSound.play();
+    
     }
 });
