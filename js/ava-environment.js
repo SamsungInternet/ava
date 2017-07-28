@@ -1,3 +1,4 @@
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 const _plantInfo = [{name:'alder', height:[15,20], width:[5,7]},
                     {name:'birch', height:[18,21], width:[6,8]},
                     {name:'pine', height:[20,25], width:[8,12]},
