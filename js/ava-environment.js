@@ -36,9 +36,10 @@ AFRAME.registerSystem('ava-environment', {
             c.setAttribute('src', '#cloud' + t);
             c.setAttribute('width', getRandomArbitrary(5, 20));
             c.setAttribute('height', getRandomArbitrary(5, 10));
-            var ch = getRandomArbitrary(30, 50);
+            var ch = getRandomArbitrary(25, 60);
             c.setAttribute('position', getRandomArbitrary(-60, 60) + ' ' + ch + ' ' +getRandomArbitrary(-60, 60));
-            c.setAttribute('rotation', '-90 0 0');
+            //c.setAttribute('rotation', '-90 0 0');
+            c.setAttribute('look-at', '#cam');
             this.el.appendChild(c);
         }
     },
