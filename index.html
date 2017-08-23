@@ -29,14 +29,14 @@
         </a-assets>
         <a-entity >
             <a-animation attribute="rotation" from="0 0 0" to="0 360 0" dur="240000" easing="linear" repeat="indefinite"></a-animation>
-            <a-entity id="cam" camera look-controls position="0 1.8 -15">
+            <a-entity id="cam" camera look-controls position="0 1.8 -14.2">
                 <a-entity cursor position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="color: black; shader: flat"></a-entity>
             </a-entity>
         </a-entity>
         
-        <a-sky src="#bg"></a-sky>
-        <a-plane src="#ground" height="40" width="40" position="0 0 0" rotation="-90 0 0"></a-plane>
-        <a-plane color="#6C792F" height="150" width="150" position="0 -0.01 0" rotation="-90 0 0"></a-plane>
+        <a-sky src="#bg" theta-start="-2"></a-sky>
+        <a-plane src="#ground" height="40" width="40" position="0 0 0" rotation="-90 0 0" material="transparency:true;"></a-plane>
+        <!-- <a-plane color="#6C792F" height="150" width="150" position="0 -0.01 0" rotation="-90 0 0"></a-plane> -->
         <!-- <a-entity laser-controls="hand: left"></a-entity> -->
 
         <!--HOUSE STRUCTURE-->

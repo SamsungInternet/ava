@@ -19,7 +19,7 @@ AFRAME.registerSystem('ava-environment', {
     generateFlora: function(num, weed){
         for(i = 0; i < num; i++){
             var sp = (weed)? 4 : 0;
-            var ep = (weed)? _plantInfo.length: 3;
+            var ep = (weed)? _plantInfo.length: 4;
             var p = Math.floor(getRandomArbitrary(sp, ep));
             var t = document.createElement('a-image');
             t.setAttribute('src', '#' + _plantInfo[p].name);
@@ -41,6 +41,8 @@ AFRAME.registerSystem('ava-environment', {
             c.setAttribute('src', '#cloud' + t);
             c.setAttribute('width', getRandomArbitrary(5, 25));
             c.setAttribute('height', getRandomArbitrary(5, 25));
+            c.setAttribute('transparent', 'true');
+            c.setAttribute('opacity', Math.random());
             var ch = getRandomArbitrary(40, 70);
             c.setAttribute('position', getRandomArbitrary(-200, 200) + ' ' + ch + ' ' +getRandomArbitrary(-200, 200));
             //c.setAttribute('rotation', '-90 0 0');
