@@ -22,6 +22,7 @@
             <img id="pine" src="imgs/pine.png">
             <img id="meadowsweet" src="imgs/meadowsweet.png">
             <img id="bracken" src="imgs/bracken.png">
+            <img id="ferns" src="imgs/ferns.png">
             <img id="ground" src="imgs/floor2.jpg">
             <img id="cloud0" src="imgs/cloud0.png">
             <img id="cloud1" src="imgs/cloud1.png">
@@ -110,8 +111,8 @@
         <a-entity position="-14.118 4.072 -12.15" rotation="-82.9642887349432 -109.43493886998723 -84.6258663408226" geometry="primitive:cylinder;height:1.5;radius:0.1"  material="src:#wood1"></a-entity>
         <a-entity position="-12.635 4.072 -13.819" rotation="-82.9642887349432 -143.98429391637586 -84.6258663408226" geometry="height:1.5;radius:0.1;primitive:cylinder"  material="src:#wood1"></a-entity>
         <!--WALLS-->
-        <a-entity id="outerwall" position="-10.244 1.487 -11.097" geometry="radius:5.38;height:3.06;thetaLength:330;openEnded:true;primitive:cylinder" rotation="0 49.9 0" material="color:#00ffff"></a-entity>
-        <a-entity id="innerwall" position="-10.244 1.487 -11.097" geometry="primitive:cylinder;height:3.06;openEnded:true;radius:5.38;thetaLength:330" rotation="0 -164.9 180" material="color:#ff0000" scale="-1 -1 -1"></a-entity>
+        <a-entity id="outerwall" position="-10.244 1.487 -11.097" geometry="primitive:cylinder;height:3.06;openEnded:true;radius:5.38;thetaLength:330" rotation="0 49.9 0" material="color:#00ffff"></a-entity>
+        <a-entity id="innerwall" position="-10.244 1.487 -11.097" geometry="thetaStart:-1;thetaLength:330;primitive:cylinder;height:3.06;openEnded:true;radius:5.38" rotation="0 -164.9 180" material="color:#ff0000" scale="-1 -1 -1"></a-entity>
         <!--ENCLOSURE-->
         <a-entity position="6.699 0.5 -8.972" geometry="radius:0.12;primitive:cylinder" material="src:#wood1"></a-entity>																									
         <a-entity position="4.514 0.538 -8.907" geometry="radius:0.13;height:1.1;primitive:cylinder" material="src:#wood1"></a-entity>																									

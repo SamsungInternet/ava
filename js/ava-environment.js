@@ -4,7 +4,8 @@ const _plantInfo = [{name:'alder', height:[15,20], width:[5,7]},
                     {name:'pine', height:[20,25], width:[8,12]},
                     {name:'hazel',height:[10,12], width:[8,11]},
                     {name:'meadowsweet', height:[.5,1.2], width:[.3,.6]},
-                    {name:'bracken', height:[.6,2], width:[.6,.9]}];
+                    {name:'bracken', height:[.6,2], width:[.6,.9]},
+                    {name:'ferns', height:[.6,.9], width:[.6,1]}];
 
 AFRAME.registerSystem('ava-environment', {
     schema:{
