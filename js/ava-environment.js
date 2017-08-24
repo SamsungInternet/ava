@@ -32,7 +32,6 @@ AFRAME.registerSystem('ava-environment', {
             t.setAttribute('position', getRandomArbitrary(-plantPos, plantPos) + ' ' + py + ' ' +getRandomArbitrary(-plantPos, plantPos));
             t.setAttribute('look-at', '#cam');
             this.el.appendChild(t);
-            console.log(getRandomArbitrary(-weed, weed));
         }
     },
     generateClouds: function(num){
