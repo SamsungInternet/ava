@@ -6,14 +6,14 @@ const _plantInfo = [{name:'alder', height:[15,20], width:[5,7]},
                     {name:'meadowsweet', height:[.5,1.2], width:[.3,.6]},
                     {name:'bracken', height:[.6,2], width:[.6,.9]},
                     {name:'grasses1', height:[.8,1], width:[.1,.4]},
-                    {name:'grasses2', height:[1.4,1.7], width:[1.2,1.5]},
+                    {name:'grasses2', height:[1.0,1.3], width:[1.2,1.5]},
                     {name:'heather', height:[.75,.9], width:[.9,1.1]},
                     {name:'stjohnswort', height:[.8,1.1], width:[1,1.2]},
                     {name:'ferns', height:[.6,.9], width:[.6,1]}];
 
 AFRAME.registerSystem('ava-environment', {
-    schema:{
-        numPlants:{type:'number', default:20},
+    schema: {
+        numPlants:{type:'number', default:35},
         numClouds:{type:'number', default:10}},
     init: function(){
         this.generateClouds(this.data.numClouds);

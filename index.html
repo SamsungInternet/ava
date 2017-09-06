@@ -35,51 +35,89 @@
             <img id="wood1" src="imgs/wood1.jpg">
             <img id="wood2" src="imgs/wood2.jpg">
             <img id="wall1" src="imgs/wall1.jpg">
-            <audio id="ambient" src="audio/ambient.mp3" preload="auto" loop="true"></audio>
+            <img id="wall2" src="https://cdn.glitch.com/7f5d0d69-6b0b-4a4d-bceb-dfce56bca0b6%2Fwattle-wall.gif?1504357657860">
+            <img id="green" src="https://cdn.glitch.com/7f5d0d69-6b0b-4a4d-bceb-dfce56bca0b6%2Fgreen.png?1504363436321">
+            <img id="brown" src="https://cdn.glitch.com/7f5d0d69-6b0b-4a4d-bceb-dfce56bca0b6%2Fbrown.png?1504365202564">
+            <img id="green2" src="https://cdn.glitch.com/7f5d0d69-6b0b-4a4d-bceb-dfce56bca0b6%2Fgreen2.png?1504365212901">
+            <img id="cow1" src="https://cdn.glitch.com/7f5d0d69-6b0b-4a4d-bceb-dfce56bca0b6%2Fcow1.gif?1504527000289">    
+            <img id="pebble1" src="https://cdn.glitch.com/7f5d0d69-6b0b-4a4d-bceb-dfce56bca0b6%2Fpebble%201.png?1504527786087">
+            <img id="pebble2" src="https://cdn.glitch.com/7f5d0d69-6b0b-4a4d-bceb-dfce56bca0b6%2Fpebble%202.png?1504527786149">
+            <img id="pebble4" src="https://cdn.glitch.com/7f5d0d69-6b0b-4a4d-bceb-dfce56bca0b6%2Fpebble%204.png?1504527786242">
+            <img id="pebble5" src="https://cdn.glitch.com/7f5d0d69-6b0b-4a4d-bceb-dfce56bca0b6%2Fpebble%205.png?1504527786404">
+            <img id="pebble3" src="https://cdn.glitch.com/7f5d0d69-6b0b-4a4d-bceb-dfce56bca0b6%2Fpebble%203.png?1504527786444">
+            <img id="rock1" src="https://cdn.glitch.com/7f5d0d69-6b0b-4a4d-bceb-dfce56bca0b6%2Frock1.png?1504527786485">
+            <img id="stone3" src="https://cdn.glitch.com/7f5d0d69-6b0b-4a4d-bceb-dfce56bca0b6%2Fstone3.png?1504527786765">
+            <img id="rock2" src="https://cdn.glitch.com/7f5d0d69-6b0b-4a4d-bceb-dfce56bca0b6%2Frock2.png?1504527879332">
+          
+                      <audio id="ambient" src="audio/ambient.mp3" preload="auto" loop="true"></audio>
         </a-assets>
-        <a-entity >
-            <!-- <a-animation attribute="rotation" from="0 0 0" to="0 360 0" dur="240000" easing="linear" repeat="indefinite"></a-animation> -->
-            <a-entity id="cam" camera look-controls wasd-controls position="0 1.8 -14.2">
-                <a-entity cursor position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="color: black; shader: flat"></a-entity>
-            </a-entity>
+        <a-entity>
+          <a-animation attribute="rotation" from="0 0 0" to="0 360 0" dur="240000" easing="linear" repeat="indefinite"></a-animation> 
+          <a-entity id="cam" camera look-controls position="0 1.8 -15"> 
+            <a-entity cursor position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="color: black; shader: flat"></a-entity> 
+          </a-entity>
         </a-entity>
         
         <a-sky src="#bg" theta-start="-2"></a-sky>
         <a-plane src="#ground" height="40" width="40" position="0 0 0" rotation="-90 0 0" material="transparency:true;"></a-plane>
-        <!-- <a-plane color="#6C792F" height="150" width="150" position="0 -0.01 0" rotation="-90 0 0"></a-plane> -->
-        <!-- <a-entity laser-controls="hand: left"></a-entity> -->
+  
+        <!--cows-->
+        <a-entity position="-14.475 1.014 14.604" geometry="depth:0;height:2.31;width:2.5" material="transparent:true;src:#cow1" look-at="#cam"></a-entity>
 
         <!--SMALL HOUSE BASE-->
-        <a-entity position="-10.39 0 -10.764" rotation="90.01166961505233 23.49126960036375 0" geometry="arc:70;radiusTubular:0.38;radius:6;primitive:torus" material=""></a-entity>
-        <a-entity position="-8.819 0 -10.936" rotation="90.01166961505233 84.51127478179643 0" geometry="arc:60;radius:4.5;radiusTubular:0.38;primitive:torus" material=""></a-entity>
-        <a-entity position="-8.41 0 -8.702" rotation="90.01166961505233 157.16232320438482 0" geometry="arc:30;radius:6.8;radiusTubular:0.38;primitive:torus" material=""></a-entity>
-        <a-entity position="-10.634 0 -10.209" rotation="90.01166961505233 -169.42362002018442 0" geometry="radius:4.17;arc:30;radiusTubular:0.38;primitive:torus" material=""></a-entity>
-        <a-entity position="-3.989 0 -11.805" rotation="90.01166961505233 -148.22418160034397 0" geometry="radius:11;arc:20;radiusTubular:0.38;primitive:torus" material=""></a-entity>
-        <a-entity position="-5.997 0 -11.261" rotation="90.01166961505233 -135.84829322551818 0" geometry="arc:15;radius:9;radiusTubular:0.38;primitive:torus" material=""></a-entity>
-        <a-entity position="-8.819 0 -9.406" rotation="90.01166961505233 131.03544774641927 0" geometry="primitive:torus;arc:55;radius:6;radiusTubular:0.38" material=""></a-entity>
-        <a-entity position="-11.255 0 -11.299" rotation="90.01166961505233 -38.44546805327824 0" geometry="arc:38;radius:7;radiusTubular:0.38;primitive:torus" material=""></a-entity>
-        <a-entity position="-12.419 0 -4.954" geometry="radius:0.76;primitive:sphere" material=""></a-entity>
-        <a-entity position="-9.643 0 -4.495" geometry="primitive:sphere;radius:0.76" material=""></a-entity>
-        <!--ENCLOSURE-->
+        <a-entity position="-9.643 0 -4.495" geometry="primitive:sphere;radius:0.76" material=" src:#brown;repeat:3 3"></a-entity>
+        <a-entity position="-12.419 0 -4.954" geometry="primitive:sphere;radius:0.76" material="src:#brown;repeat:3 3"></a-entity>
+        <a-entity position="-10.634 0 -10.209" rotation="90.01166961505233 -169.42362002018442 0" geometry="radius:4.17;arc:30;radiusTubular:0.38;primitive:torus" material=" src:#brown;repeat:2 2"></a-entity>
+        <a-entity position="-10.39 0 -10.764" rotation="90.01166961505233 23.49126960036375 0" geometry="arc:70;radiusTubular:0.38;radius:6;primitive:torus" material="src:#brown;repeat:5 5"></a-entity>
+        <a-entity position="-8.41 0 -8.702" rotation="90.01166961505233 157.16232320438482 0" geometry="arc:30;radius:6.8;radiusTubular:0.38;primitive:torus" material=" src:#brown;repeat:3 3"></a-entity>
+        <a-entity position="-3.989 0 -11.805" rotation="90.01166961505233 -148.22418160034397 0" geometry="primitive:torus;arc:20;radius:11;radiusTubular:0.38" material="src:#brown;repeat:3 3"></a-entity>
+        <a-entity position="-5.997 0 -11.261" rotation="90.01166961505233 -135.84829322551818 0" geometry="primitive:torus;arc:15;radius:9;radiusTubular:0.38" material="src:#brown;repeat:3 3"></a-entity>
+        <a-entity position="-11.255 0 -11.299" rotation="90.012 -38.445 0" geometry="primitive:torus;arc:38;radius:7;radiusTubular:0.38" material="src:#brown;repeat:4 4"></a-entity>
+        <a-entity position="-8.819 0 -10.936" rotation="90.011669 84.511274 0" geometry="primitive:torus;arc:60;radius:4.5;radiusTubular:0.38" material="repeat:3 3;src:#brown;repeat:4 4"></a-entity>
+        <a-entity position="-9.218 0 -10.8" rotation="90.01166961505233 138.99956109873773 0" geometry="radius:4.7;arc:62;primitive:torus;radiusTubular:0.38" material="repeat:4 4;src:#brown;repeat:4 4"></a-entity>
+
+      <!--ENCLOSURE POSTS-->
         <a-entity position="-16.614 0.493 17.095" geometry="height:1.23;radius:0.12;primitive:cylinder" material="src:#wood1"></a-entity>
         <a-entity position="-14.726 0.596 17.883" geometry="radius:0.135;height:1.2;primitive:cylinder" material="src:#wood2"></a-entity>
-        <a-entity position="-17.342 0.596 15.65" geometry="radius:0.13;height:1.3599999999999999;primitive:cylinder" material="src:#wood1"></a-entity>
-        <a-entity position="-17.631 0.596 13.567" geometry="radius:0.12;height:1.3199999999999998;primitive:cylinder" material="src:#wood2"></a-entity>
-        <a-entity position="-16.901 0.596 11.511" geometry="height:1.2599999999999998;radius:0.13;primitive:cylinder" material="src:#wood1"></a-entity>
-        <a-entity position="-15.29 0.596 10.037" geometry="radius:0.12;height:1.2599999999999998;primitive:cylinder" material="src:#wood2"></a-entity>
-        <a-entity position="-13.053 0.596 9.102" geometry="height:1.1699999999999997;radius:0.12;primitive:cylinder" material="src:#wood1"></a-entity>
-        <a-entity position="-11.02 0.596 8.285" geometry="radius:0.14;height:1.1899999999999997;primitive:cylinder" material="src:#wood2"></a-entity>
-        <a-entity position="-8.957 0.596 7.579" geometry="radius:0.13;height:1.2199999999999998;primitive:cylinder" material="src:#wood1"></a-entity>
-        <a-entity position="-6.648 0.596 7.456" geometry="radius:0.15;height:1.1599999999999997;primitive:cylinder" material="src:#wood2"></a-entity>
-        <a-entity position="-4.922 0.688 8.062" geometry="height:1.4099999999999997;radius:0.12;primitive:cylinder" material="src:#wood1"></a-entity>
-        <a-entity position="-2.856 0.629 10.607" geometry="height:1.3399999999999996;radius:0.19;primitive:cylinder" material="src:#wood2"></a-entity>
-        <a-entity position="-2.452 0.596 12.702" geometry="height:1.1599999999999997;radius:0.17;primitive:cylinder" material="src:#wood1"></a-entity>
-        <a-entity position="-2.508 0.596 14.458" geometry="height:1.1899999999999997;radius:0.13;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-17.342 0.596 15.65" geometry="radius:0.13;height:1.359;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-17.631 0.596 13.567" geometry="radius:0.12;height:1.318;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-16.901 0.596 11.511" geometry="height:1.258;radius:0.13;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-15.29 0.596 10.037" geometry="radius:0.12;height:1.2598;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-13.053 0.596 9.102" geometry="height:1.1697;radius:0.12;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-11.02 0.596 8.285" geometry="radius:0.14;height:1.1897;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-8.957 0.596 7.579" geometry="radius:0.13;height:1.2198;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-6.648 0.596 7.456" geometry="radius:0.15;height:1.1597;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-4.922 0.688 8.062" geometry="height:1.409;radius:0.12;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-2.856 0.629 10.607" geometry="height:1.339;radius:0.19;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-2.452 0.596 12.702" geometry="height:1.159;radius:0.17;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-2.508 0.596 14.458" geometry="height:1.189;radius:0.13;primitive:cylinder" material="src:#wood2"></a-entity>
         <a-entity position="-5.412 0.571 16.37" geometry="radius:0.13;height:1.2;primitive:cylinder" material="src:#wood1"></a-entity>
         <a-entity position="-7.455 0.571 16.949" geometry="primitive:cylinder;height:1.2;radius:0.14" material="src:#wood2"></a-entity>
         <a-entity position="-9.727 0.571 17.563" geometry="radius:0.13;height:1.2;primitive:cylinder" material="src:#wood1"></a-entity>
-        <a-entity position="-3.768 0.596 15.649" geometry="primitive:cylinder;height:1.1899999999999997;radius:0.13" material="src:#wood2"></a-entity>
-        <a-entity position="-12.393 0.671 18.007" geometry="height:1.4299999999999997;radius:0.13;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-3.768 0.596 15.649" geometry="primitive:cylinder;height:1.189;radius:0.13" material="src:#wood2"></a-entity>
+        <a-entity position="-12.393 0.671 18.007" geometry="height:1.429;radius:0.13;primitive:cylinder" material="src:#wood1"></a-entity>
+
+        <!--ENCLOSURE FENCE-->        
+        <a-entity position="-11.071 0.56 17.798" rotation="0 9.33921206063242 0" geometry="depth:0;height:1.16;width:2.53" material="transparent:true;src:#fence"></a-entity>
+        <a-entity position="-13.551 0.56 17.916" rotation="0 -0.40107045659157625 0" geometry="width:2.12;depth:0;height:1.16" material="transparent:true;src:#fence"></a-entity>
+        <a-entity position="-15.709 0.56 17.528" rotation="0 -22.288058230589023 0" geometry="width:1.84;depth:0;height:1.16" material="transparent:true;src:#fence"></a-entity>
+        <a-entity position="-15.709 0.56 17.528" rotation="0 -22.288058230589023 0" geometry="width:1.84;depth:0;height:1.16" material="transparent:true;src:#fence"></a-entity>
+        <a-entity position="-17.001 0.56 16.381" rotation="0 -64.91611818832227 0" geometry="width:1.5;depth:0;height:1.16" material="transparent:true;src:#fence"></a-entity>
+        <a-entity position="-17.494 0.56 14.586" rotation="0 -83.36535919153478 0" geometry="width:2;depth:0;height:1.16" material="transparent:true;src:#fence"></a-entity>
+        <a-entity position="-17.283 0.574 12.53" rotation="0 -108.9192768543695 0" geometry="depth:0;height:1.16;width:2" material="transparent:true;src:#fence"></a-entity>
+        <a-entity position="-16.128 0.574 10.734" rotation="0 -140.0308851299732 0" geometry="depth:0;height:1.16;width:2" material="transparent:true;src:#fence"></a-entity>
+        <a-entity position="-14.187 0.575 9.538" rotation="0 -158.42283035367262 0" geometry="width:2.2;depth:0;height:1.16" material="transparent:true;src:#fence"></a-entity>
+        <a-entity position="-12.061 0.575 8.67" rotation="0 -157.67798522000254 0" geometry="width:2;depth:0;height:1.16" material="transparent:true;src:#fence"></a-entity>
+        <a-entity position="-9.953 0.575 7.898" rotation="0 -162.6627180376407 0" geometry="width:2;depth:0;height:1.16" material="transparent:true;src:#fence"></a-entity>
+        <a-entity position="-7.785 0.575 7.521" rotation="0 -176.52829667980663 0" geometry="width:2.1;depth:0;height:1.16" material="transparent:true;src:#fence"></a-entity>
+        <a-entity position="-5.817 0.575 7.734" rotation="0 160.94384465224826 0" geometry="width:1.8;depth:0;height:1.16" material="transparent:true;src:#fence"></a-entity>
+        <a-entity position="-2.497 0.575 13.607" rotation="0 87.4906553164767 0" geometry="width:1.5;depth:0;height:1.16" material="transparent:true;src:#fence"></a-entity>
+        <a-entity position="-8.596 0.56 17.29" rotation="0 12.37588837482578 0" geometry="width:2.171;depth:0;height:1.16" material="transparent:true;src:#fence"></a-entity>
+        <a-entity position="-6.449 0.56 16.694" rotation="0 16.55848027928079 0" geometry="width:1.9;depth:0;height:1.16" material="transparent:true;src:#fence"></a-entity>
+        <a-entity position="-3.14 0.56 15.097" rotation="0 44.34693334312572 0" geometry="width:1.5;depth:0;height:1.16" material="transparent:true;src:#fence"></a-entity>
+        <a-entity position="-3.861 0.575 9.323" rotation="0 127.02474318050352 0" geometry="width:3;depth:0;height:1.16" material="transparent:true;src:#fence"></a-entity>
+        <a-entity position="-2.228 0.575 12.432" rotation="9.224620501606255 3.953408786402681 0.6302535746439055" geometry="depth:0;height:1.16;width:1.8" material="transparent:true;src:#fence"></a-entity>
+        <a-entity position="-4.606 0.56 16.059" rotation="0 23.319382261824504 0" geometry="width:1.6;depth:0;height:1.16" material="transparent:true;src:#fence"></a-entity>
         <!--SMALL HOUSE WALLS-->
         <a-entity position="-11.135 1.09 -11.148" rotation="0 6.990085100596043 0" geometry="height:3;thetaLength:45;radius:7;openEnded:true;primitive:cylinder" material="src:#wall1"></a-entity>
         <a-entity position="-10.396 1.09 -10.48" rotation="0 51.2224268846956 0" geometry="thetaLength:65;radius:6;height:3;openEnded:true;primitive:cylinder" material="src:#wall1"></a-entity>
@@ -92,17 +130,479 @@
         <a-entity position="-10.396 1.09 -10.48" rotation="0 114.99262948275623 0" scale="-1 1 1" geometry="primitive:cylinder;height:3;openEnded:true;radius:6;thetaLength:65" material="src:#wall1"></a-entity>
         <a-entity position="-11.135 1.09 -11.148" rotation="0 51.738088900313336 0" scale="-1 1 1" geometry="primitive:cylinder;height:3;openEnded:true;radius:7;thetaLength:45" material="src:#wall1"></a-entity>
         <a-entity position="-10.780000000000001 1.09 -10.346" rotation="0 -102.50214954890427 0" geometry="radius:4.17;thetaLength:30;height:3;openEnded:true;primitive:cylinder" material="src:#wall1"></a-entity>
-        <a-entity position="-10.79 1.09 -10.346" rotation="0 -102.50214954890427 0" geometry="primitive:cylinder;height:3;openEnded:true;radius:4.17;thetaLength:30" material="src:wall1"></a-entity>
-        <a-entity position="-10.79 1.09 -10.346" rotation="0 -70.0154425649866 0" scale="-1 1 1" geometry="thetaLength:35;primitive:cylinder;height:3;openEnded:true;radius:4.17" material="src:#wall1"></a-entity>  
+        <a-entity position="-10.79 1.09 -10.346" rotation="0 -102.50214954890427 0" geometry="primitive:cylinder;height:3;openEnded:true;radius:4.17;thetaLength:30" material="src:#wall2"></a-entity>
+        <a-entity position="-10.79 1.09 -10.346" rotation="0 -70.0154425649866 0" scale="-1 1 1" geometry="thetaLength:35;primitive:cylinder;height:3;openEnded:true;radius:4.17" material="src:#wall2"></a-entity>  
         <a-entity position="-4.121 1.09 -11.913" rotation="0 -55 0" scale="-1 1 1" geometry="primitive:cylinder;height:3;openEnded:true;radius:11;thetaLength:20" material="src:#wall1"></a-entity>
         <a-entity position="-10.79 1.09 -10.346" rotation="0 -71.23 0" geometry="thetaLength:32;primitive:cylinder;height:3;openEnded:true;radius:4.17" material="src:#wall1" scale="-1 1 1"></a-entity>  
         <a-entity position="-4.131 1.09 -11.913" rotation="0 -75.45854161872941 0" geometry="thetaLength:20;radius:11;height:3;openEnded:true;primitive:cylinder" material="src:#wall1"></a-entity>
-        <a-entity position="-5.842 1.09 -10.884" rotation="0 -43.61 0" scale="-1 1 1" geometry="primitive:cylinder;height:3;openEnded:true;radius:9;thetaLength:13" material="src:#wall1"></a-entity>
-        <a-entity position="-5.842 1.09 -10.884" rotation="0 -56.550934379412254 0" geometry="thetaLength:13;radius:9;height:3;openEnded:true;primitive:cylinder" material="src:#wall1"></a-entity>
+        <a-entity position="-5.842 1.09 -10.884" rotation="0 -43.61 0" scale="-1 1 1" geometry="primitive:cylinder;height:3;openEnded:true;radius:9;thetaLength:13" material="src:#wall2"></a-entity>
+        <a-entity position="-5.842 1.09 -10.884" rotation="0 -56.550934379412254 0" geometry="thetaLength:13;radius:9;height:3;openEnded:true;primitive:cylinder" material="src:#wall2"></a-entity>
         <!--SMALL HOUSE POSTS-->
         <a-entity position="-10.474 1.143 -4.229" geometry="primitive:cylinder;height:2.5;radius:0.2" material="src:#wood1"></a-entity>
-        <a-entity position="-11.853 1.143 -4.359" geometry="radius:0.2;height:2.5;primitive:cylinder" material="src:#wood2"></a-entity>       
-    </a-scene>
+        <a-entity position="-11.853 1.143 -4.359" geometry="radius:0.2;height:2.5;primitive:cylinder" material="src:#wood2"></a-entity>   
+        <a-entity position="-11.177 2.436 -4.23" geometry="radius:0.15;primitive:cylinder;height:2" material="src:#wood2" rotation="-90 83.250 0"></a-entity>
+        <a-entity position="-7.726 1.083 -9.711" geometry="radius:0.12;height:5;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-8.128 1.132 -9.061" geometry="primitive:cylinder;height:5;radius:0.1" material="src:#wood1"></a-entity>
+        <a-entity position="-8.858 1.05 -8.462" geometry="radius:0.09;height:5;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-9.803 1.14 -8.313" geometry="radius:0.08;height:5;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-10.58 1.116 -8.447" geometry="radius:0.1;height:5;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-11.506 1.097 -9.679" geometry="radius:0.11;height:5;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-11.45 1.097 -10.604" geometry="primitive:cylinder;height:5;radius:0.109" material="src:#wood1"></a-entity>
+        <a-entity position="-10.945 1.088 -11.463" geometry="primitive:cylinder;height:5;radius:0.108" material="src:#wood2"></a-entity>
+        <a-entity position="-9.878 1.113 -11.983" geometry="radius:0.12;height:5;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-8.681 1.07 -11.871" geometry="radius:0.11;height:5;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-7.661 1.034 -10.871" geometry="radius:0.1;height:5;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-8.152 3.645 -11.382" geometry="height:1.5;radius:0.08;primitive:cylinder" material="src:#wood2" rotation="90.01166961505233 45.492848933387364 0"></a-entity>
+        <a-entity position="-7.682 3.645 -10.315" geometry="height:1.21;radius:0.08;primitive:cylinder" material="src:#wood1" rotation="89.43871181992151 -157.39150632243712 -153.49539331554755"></a-entity>
+        <a-entity position="-9.252 3.634 -11.937" geometry="height:1.3;radius:0.08;primitive:cylinder" material="src:#wood2" rotation="90.01166961505233 82.84969717591703 0"></a-entity>
+        <a-entity position="-10.419 3.586 -11.747" geometry="height:1.140;radius:0.08;primitive:cylinder" material="src:#wood1" rotation="90.01166961505233 115.27910838032163 0"></a-entity>
+        <a-entity position="-11.202 3.619 -11.06" geometry="height:0.980;radius:0.08;primitive:cylinder" material="src:#wood1" rotation="90.01166961505233 147.70851958472622 0"></a-entity>
+        <a-entity position="-11.516 3.619 -10.146" geometry="height:0.890;radius:0.08;primitive:cylinder" material="src:#wood1" rotation="90.01166961505233 174.694831735388 0"></a-entity>
+        <a-entity position="-11.055 3.619 -9.05" geometry="height:1.61;radius:0.08;primitive:cylinder" material="src:#wood2" rotation="90.01166961505233 -142.7237867670881 0"></a-entity>
+        <a-entity position="-10.157 3.619 -8.375" geometry="height:0.850;radius:0.08;primitive:cylinder" material="src:#wood2" rotation="90.01166961505233 -101.81460019474729 0"></a-entity>
+        <a-entity position="-9.321 3.619 -8.375" geometry="height:0.890;radius:0.08;primitive:cylinder" material="src:#wood2" rotation="90.01166961505233 -78.0941474763312 0"></a-entity>
+        <a-entity position="-8.469 3.619 -8.792" geometry="height:0.990;radius:0.08;primitive:cylinder" material="src:#wood2" rotation="87.03228908037204 4.182591904455009 53.85803274229738"></a-entity>
+        <a-entity position="-7.904 3.619 -9.399" geometry="height:0.730;radius:0.08;primitive:cylinder" material="src:#wood1" rotation="87.03228908037204 20.569184845196553 53.85803274229738"></a-entity>
+        <a-entity position="-12.427 3.375 -10.148" geometry="height:5.2;radius:0.1;primitive:cylinder" material="src:#wood2" rotation="-0.4583662361046586 -3.552338329811104 -68.23927340008105"></a-entity>
+        <a-entity position="-11.837 3.358 -11.577" geometry="height:5;radius:0.1;primitive:cylinder" material="src:#wood2" rotation="-0.2291831180523293 -36.325524211294194 -64.22856883416529"></a-entity>
+        <a-entity position="-10.648 3.37 -12.606" geometry="primitive:cylinder;height:5;radius:0.1" material="src:#wood1" rotation="-0.2291831180523293 -66.17662533761009 -64.22856883416529"></a-entity>
+        <a-entity position="-9.184 3.317 -13.096" geometry="height:4.58;radius:0.1;primitive:cylinder" material="src:#wood1" rotation="-0.2291831180523293 -97.46012095175304 -64.22856883416529"></a-entity>
+        <a-entity position="-7.54 3.353 -12.304" geometry="primitive:cylinder;height:5;radius:0.1" material="src:#wood2" rotation="3.20856365273261 -132.12406755716785 -67.32254092787173"></a-entity>
+        <a-entity position="-7.54 3.353 -12.304" geometry="primitive:cylinder;height:5;radius:0.1" material="src:#wood1" rotation="3.20856365273261 -132.12406755716785 -67.32254092787173"></a-entity>
+        <a-entity position="-6.817 3.38 -10.358" geometry="primitive:cylinder;height:5;radius:0.1" material="src:#wood2" rotation="-0.40107045659157625 -172.17381743681239 -63.02535746439056"></a-entity>
+        <a-entity position="-7.185 3.379 -8.834" geometry="primitive:cylinder;height:5;radius:0.1" material="src:#wood1" rotation="-0.2291831180523293 156.47477385022782 -64.22856883416529"></a-entity>
+        <a-entity position="-7.968 3.341 -7.907" geometry="primitive:cylinder;height:5;radius:0.1" material="src:#wood2" rotation="1.2032113697747289 131.20733508495852 -65.89014644004466"></a-entity>
+        <a-entity position="-9.124 3.106 -6.757" geometry="height:4.02;radius:0.1;primitive:cylinder" material="src:#wood1" rotation="0.2864788975654116 99.92383947081557 -67.32254092787173"></a-entity>
+        <a-entity position="-10.121 3.23 -6.473" geometry="height:4.85;radius:0.1;primitive:cylinder" material="src:#wood2" rotation="-0.9740282517223996 81.53189424711614 -70.53110458060435"></a-entity>
+        <a-entity position="-10.919 3.259 -6.803" geometry="height:5.7;radius:0.1;primitive:cylinder" material="src:#wood2" rotation="-2.4064227395494577 68.52575229764645 -70.81758347816975"></a-entity>
+        <a-entity position="-12.01 3.237 -8.203" geometry="height:4.36;radius:0.1;primitive:cylinder" material="src:#wood1" rotation="1.3178029288008934 32.0856365273261 -66.63499157371474"></a-entity>
+        <a-entity position="-8.793 1.143 -5.005" geometry="primitive:cylinder;height:2.5;radius:0.15" material="src:#wood1"></a-entity>
+        <a-entity position="-6.529 1.143 -6.275" geometry="primitive:cylinder;height:2.5;radius:0.18" material="src:#wood2"></a-entity>
+        <a-entity position="-5.215 1.143 -7.977" geometry="primitive:cylinder;height:2.5;radius:0.17" material="src:#wood2"></a-entity>
+        <a-entity position="-4.701 1.143 -10.648" geometry="primitive:cylinder;height:2.5;radius:0.16" material="src:#wood1"></a-entity>
+        <a-entity position="-6.027 1.143 -13.936" geometry="primitive:cylinder;height:2.5;radius:0.15" material="src:#wood1"></a-entity>
+        <a-entity position="-8.916 1.143 -15.061" geometry="primitive:cylinder;height:2.5;radius:0.14" material="src:#wood2"></a-entity>
+        <a-entity position="-11.527 1.143 -14.544" geometry="primitive:cylinder;height:2.5;radius:0.15" material="src:#wood2"></a-entity>
+        <a-entity position="-13.583 1.143 -12.851" geometry="primitive:cylinder;height:2.5;radius:0.14" material="src:#wood1"></a-entity>
+        <a-entity position="-14.698 1.143 -10.283" geometry="primitive:cylinder;height:2.5;radius:0.16" material="src:#wood2"></a-entity>
+        <a-entity position="-13.686 1.143 -7.157" geometry="primitive:cylinder;height:2.5;radius:0.15" material="src:#wood2"></a-entity>
+        <a-entity position="-11.853 1.143 -4.359" geometry="primitive:cylinder;height:2.5;radius:0.15" material="src:#wood1"></a-entity>
+           <!--SMALL HOUSE ROOF-->
+          <!--Timber beams-->
+        <a-entity position="-10.691 4.096 -9.584" rotation="87.94902155258136 177.50232493152902 162.4335349195884" geometry="height:1.1101999;radius:0.03;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-11.134 3.942 -9.495" rotation="87.94902155258136 179.39308565546074 162.4335349195884" geometry="height:1.2302;radius:0.03;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-11.667 3.698 -9.354" rotation="87.94902155258136 177.04395869542438 162.4335349195884" geometry="height:1.71;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-11.134 3.942 -9.495" rotation="87.94902155258136 179.39308565546074 162.4335349195884" geometry="height:1.2302;radius:0.03;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-11.667 3.698 -9.354" rotation="87.94902155258136 177.04395869542438 162.4335349195884" geometry="height:1.71;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-12.271 3.389 -9.172" rotation="89.43871181992151 -172.80407101145627 167.76204241430503" geometry="primitive:cylinder;height:2.14;radius:0.03" material="src:#wood2"></a-entity>
+        <a-entity position="-12.866 3.148 -9.015" rotation="88.63657090673836 177.04395869542438 162.14705602202298" geometry="height:2.37;radius:0.03;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-13.397 2.898 -8.897" rotation="88.63657090673836 -178.13257850617293 162.14705602202298" geometry="primitive:cylinder;height:2.81;radius:0.03" material="src:#wood2"></a-entity>
+        <a-entity position="-10.633 4.224 -10.313" rotation="65.03070974734844 91.61595144141863 112.75809408174601" geometry="height:0.69;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-11.072 4.026 -10.48" rotation="87.94902155258136 139.85899779143395 165.3556196747556" geometry="height:0.93;radius:0.03;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-11.521 3.821 -10.624" rotation="88.17820467063369 49.61814505832929 71.79161172989214" geometry="height:1.22;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-12.39 2.615 -13.484" rotation="89.32412026089534 115.16451682129545 167.18908461917422" geometry="height:2.63;radius:0.03;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-12.015 2.881 -13.004" rotation="89.32412026089534 113.50293921541609 167.18908461917422" geometry="height:2.25;radius:0.03;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-10.309 4.263 -10.885" rotation="83.93831698666561 156.1882949526624 -149.31280141109252" geometry="primitive:cylinder;height:0.78;radius:0.03" material="src:#wood1"></a-entity><a-entity position="-10.569 4.067 -11.206" rotation="87.54795109598979 96.60068425905679 149.25550563157944" geometry="height:1.1;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-10.844 3.809 -11.581" rotation="87.54795109598979 93.39212060632418 149.25550563157944" geometry="height:1.29;radius:0.03;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-11.239 3.506 -12.022" rotation="87.54795109598979 97.91848718785769 149.25550563157944" geometry="height:1.69;radius:0.03;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-10.243 2.565 -14.569" rotation="87.03228908037204 87.77713421404212 171.5435638621685" geometry="height:2.670;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-7.537 2.579 -14.334" rotation="88.40738778868602 12.776958831417359 124.33184154338863" geometry="height:3.1303;radius:0.03;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-7.899 2.953 -13.673" rotation="88.40738778868602 9.511099399171666 124.33184154338863" geometry="height:2.6303;radius:0.03;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-8.974 4.126 -11.438" rotation="84.51127478179643 -78.95358416902744 38.044397596686665" geometry="height:1.035;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-8.779 3.902 -11.829" rotation="87.89172577306829 -42.68535573724633 70.0154425649866" geometry="height:1.265;radius:0.03;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-8.585 3.692 -12.223" rotation="87.89172577306829 -42.68535573724633 70.0154425649866" geometry="height:1.525;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-8.337 3.44 -12.732" rotation="87.89172577306829 -40.27893299769687 70.0154425649866" geometry="height:1.964;radius:0.03;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-8.122 3.184 -13.207" rotation="88.40738778868602 11.631043241155712 124.33184154338863" geometry="primitive:cylinder;height:2.27;radius:0.03" material="src:#wood2"></a-entity>
+        <a-entity position="-10.14 2.899 -13.912" rotation="87.03228908037204 89.38141604040842 171.5435638621685" geometry="height:2.27;radius:0.03;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-9.742 4.179 -11.419" rotation="81.76107736516848 93.27752904729802 172.4030005548647" geometry="height:0.91;radius:0.03;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-9.814 4.006 -11.78" rotation="87.03228908037204 90.24085273310466 171.5435638621685" geometry="height:1.06;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-9.882 3.737 -12.32" rotation="87.03228908037204 85.88637349011042 171.5435638621685" geometry="height:1.36;radius:0.03;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-9.973 3.465 -12.822" rotation="87.03228908037204 89.89707805602616 171.5435638621685" geometry="height:1.65;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-10.025 3.213 -13.337" rotation="87.03228908037204 88.69386668625144 171.5435638621685" geometry="height:1.91;radius:0.03;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-11.615 3.198 -12.524" rotation="89.32412026089534 114.53426324665158 167.18908461917422" geometry="height:2.01;radius:0.03;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-12.085 3.538 -10.827" rotation="88.17820467063369 42.97183463481174 71.79161172989214" geometry="height:1.641;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-12.661 3.216 -11.031" rotation="88.17820467063369 46.12310250803127 71.79161172989214" geometry="height:2.06;radius:0.03;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-13.268 2.943 -11.238" rotation="88.17820467063369 43.83127132750798 71.79161172989214" geometry="height:2.32;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-13.858 2.696 -11.438" rotation="88.17820467063369 44.4042291226388 71.79161172989214" geometry="height:2.58;radius:0.03;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-13.848 2.682 -8.775" rotation="87.72 179.45 162.491" geometry="primitive:cylinder;height:3.2;radius:0.03" material="src:#wood1"></a-entity>
+        <a-entity position="-5.654 2.633 -12.117" rotation="88.23550045014677 -148.62525205693555 10.198648753328653" geometry="height:3.46;radius:0.03;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-6.162 2.926 -11.854" rotation="88.92304980430377 -123.93077108679705 36.09634109324186" geometry="height:2.95;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-6.808 3.279 -11.488" rotation="88.92304980430377 -120.95139055211679 36.09634109324186" geometry="height:2.57;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-7.396 3.591 -11.202" rotation="88.92304980430377 -120.32113697747289 36.09634109324186" geometry="height:2.13;radius:0.03;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-7.821 3.868 -10.974" rotation="87.2041764189113 -19.595156593474155 136.8223214772406" geometry="height:1.74;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-8.253 4.06 -10.733" rotation="87.2041764189113 -17.074142294898532 136.8223214772406" geometry="height:1.37;radius:0.03;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-8.738 4.356 -10.458" rotation="83.07888029396936 -6.818197762056796 147.1355617895954" geometry="height:1.13;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-5.208 2.578 -9.328" rotation="89.55330337894766 -91.27217676434014 100.89786772253797" geometry="height:2.62;radius:0.03;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-6.871 3.424 -9.542" rotation="89.38141604040842 -38.27358071473899 156.47477385022782" geometry="height:1.74;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-7.471 3.761 -9.667" rotation="88.98034558381684 -157.67798522000254 37.07036934496426" geometry="height:1.45;radius:0.03;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-7.856 3.953 -9.711" rotation="86.97499330085897 -168.96525378407975 22.058875112536693" geometry="height:1.20997;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-8.343 4.195 -9.786" rotation="83.25076763250861 -175.0386064124665 15.928226704636888" geometry="height:0.9597;radius:0.03;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-8.76 4.417 -9.823" rotation="77.8076685787658 -177.21584603396363 13.693691303626675" geometry="height:0.7198;radius:0.03;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-8.787 4.202 -9.265" rotation="77.8076685787658 152.46406928431207 13.693691303626675" geometry="primitive:cylinder;height:0.71998;radius:0.03" material="src:#wood1"></a-entity>
+        <a-entity position="-9.052 4.36 -9.445" rotation="77.8076685787658 152.46406928431207 13.693691303626675" geometry="height:0.4799;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-7.659 3.591 -8.418" rotation="84.16750010471793 79.35465462561902 -64.45775195221762" geometry="height:1.2799;radius:0.03;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-7.272 3.285 -8.136" rotation="84.16750010471793 79.35465462561902 -64.45775195221762" geometry="height:1.5599;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-6.764 2.995 -7.735" rotation="83.3080634120217 62.452399669259734 -84.74045789984876" geometry="height:1.7299;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-6.33 2.731 -7.392" rotation="81.41730268808999 65.60366754247926 -78.32333059438353" geometry="height:2.0599;radius:0.03;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-5.965 2.482 -7.128" rotation="80.55786599539374 55.748793466229095 -88.35009200917294" geometry="height:2.2099;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-8.259 3.054 -6.811" rotation="80.55786599539374 29.56462222875048 -88.35009200917294" geometry="height:2.0399;radius:0.03;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-8.041 2.825 -6.345" rotation="80.55786599539374 29.56462222875048 -88.35009200917294" geometry="height:2.2199;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-7.812 2.577 -5.809" rotation="79.75572508221059 39.47679208451372 -81.93296470370773" geometry="height:2.61;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-8.504 3.343 -7.344" rotation="80.55786599539374 29.56462222875048 -88.35009200917294" geometry="height:1.599;radius:0.03;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-8.691 3.557 -7.778" rotation="78.32333059438353 47.09713075975367 -73.51048511528461" geometry="height:1.489;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-8.924 3.782 -8.22" rotation="78.32333059438353 41.883214824063174 -73.51048511528461" geometry="height:1.1699;radius:0.03;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-9.031 3.94 -8.556" rotation="78.32333059438353 47.15442653926675 -73.51048511528461" geometry="height:0.9399;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-9.586 2.691 -5.008" rotation="76.37527409093873 -42.91453885529866 -139.6871104528947" geometry="height:1.719;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-9.634 2.898 -5.577" rotation="77.40659812217422 -30.25217158290747 -132.92620847035099" geometry="height:1.4599;radius:0.03;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-9.634 3.033 -5.97" rotation="77.40659812217422 -33.57532679466624 -132.92620847035099" geometry="height:1.239;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-9.634 3.27 -6.545" rotation="75.57313317775558 -47.61279277537141 -141.11950494072175" geometry="primitive:cylinder;height:1.2399;radius:0.03" material="src:#wood2"></a-entity>
+        <a-entity position="-9.634 3.46 -7.097" rotation="76.66175298850415 -35.580679077624126 -135.27533543038737" geometry="height:1.039;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-9.628 3.688 -7.562" rotation="75.28665428019018 -48.24304635001531 -140.77573026364325" geometry="height:0.789;radius:0.03;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-9.628 3.889 -8.187" rotation="75.28665428019018 -48.24304635001531 -140.77573026364325" geometry="height:0.639;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-10.26 4.439 -10.189" rotation="63.48372370049522 108.9192768543695 131.9521802186286" geometry="height:0.480;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-9.435 4.426 -10.738" rotation="83.47995075056095 -78.4379221534097 13.006141949469688" geometry="height:0.8800;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-9.684 4.348 -9.375" rotation="76.43256987045183 88.8084582452776 -26.470650135044036" geometry="primitive:cylinder;height:0.97019;radius:0.03" material="src:#wood2"></a-entity>
+        <a-entity position="-9.581 4.174 -9.051" rotation="86.05826082864965 13.120733508495853 -87.26147219842437" geometry="height:1.2002;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-10.081 4.347 -9.662" rotation="80.61516177490682 178.0179869471468 169.48091579969753" geometry="height:0.83019;radius:0.03;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-9.628 4.024 -8.457" rotation="75.28665428019018 -48.24304635001531 -140.77573026364325" geometry="height:0.539;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-9.323 4.087 -8.789" rotation="79.52654196415826 -4.010704565915763 -111.21110803489279" geometry="height:1.069;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-9.024 4.539 -9.862" rotation="82.16214782176004 158.36553457415954 5.672282171795151" geometry="height:0.5799;radius:0.03;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-8.917 4.483 -10.377" rotation="83.07888029396936 -15.01149423242757 147.1355617895954" geometry="height:0.7099;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-10.126 4.420 -10.657" rotation="87.54795109598979 94.88181087366432 149.25550563157944" geometry="height:0.60;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-9.093 4.255 -11.166" rotation="84.51127478179643 -85.02693679741417 38.044397596686665" geometry="height:0.770;radius:0.03;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-10.027 4.072 -8.633" rotation="82.10485204224697 29.048960213132737 -49.045187263198464" geometry="primitive:cylinder;height:0.539;radius:0.03" material="src:#wood1"></a-entity>
+        <a-entity position="-10.093 3.975 -8.31" rotation="82.10485204224697 24.75177674965156 -49.045187263198464" geometry="height:0.659;radius:0.03;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-10.176 3.866 -7.926" rotation="82.10485204224697 28.476002418001915 -49.045187263198464" geometry="height:0.729;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-10.305 3.634 -7.434" rotation="83.07888029396936 -2.4637185190625397 -80.27138709782834" geometry="primitive:cylinder;height:0.729;radius:0.03" material="src:#wood2"></a-entity>
+        <a-entity position="-10.347 3.545 -7.213" rotation="83.07888029396936 -2.4637185190625397 -80.27138709782834" geometry="primitive:cylinder;height:0.729;radius:0.03" material="src:#wood1"></a-entity>
+        <a-entity position="-10.483 3.406 -6.761" rotation="83.07888029396936 -6.990085100596043 -80.27138709782834" geometry="height:0.96;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-10.618 3.226 -6.32" rotation="83.07888029396936 -1.776169164905552 -80.27138709782834" geometry="height:1.139;radius:0.03;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-10.74 3.062 -5.825" rotation="83.07888029396936 -6.18794418741289 -80.27138709782834" geometry="primitive:cylinder;height:1.1399;radius:0.03" material="src:#wood1"></a-entity>
+        <a-entity position="-10.863 2.894 -5.362" rotation="82.90699295543013 -2.3491269600363753 -82.16214782176004" geometry="height:1.3299;radius:0.03;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-10.993 2.707 -4.88" rotation="82.90699295543013 -3.437746770784939 -83.25076763250861" geometry="height:1.49;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-11.049 2.6 -4.537" rotation="82.84969717591703 6.875493541569878 -72.88023154064072" geometry="height:1.6199;radius:0.03;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-11.729 3.231 -7.261" rotation="84.05290854569178 9.969465635276324 -37.757918699121255" geometry="height:1.989;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-11.471 3.375 -7.587" rotation="84.05290854569178 9.969465635276324 -37.757918699121255" geometry="height:1.739;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-11.165 3.562 -7.909" rotation="83.76642964812635 -18.105466326134014 -63.139949023416726" geometry="height:1.469;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-10.898 3.718 -8.231" rotation="83.93831698666561 -3.20856365273261 -52.02456779787875" geometry="height:1.119;radius:0.03;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-10.665 3.906 -8.538" rotation="82.50592249883854 -36.26822843178111 -81.76107736516848" geometry="height:0.989;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-10.465 4.009 -8.77" rotation="82.50592249883854 -36.26822843178111 -81.76107736516848" geometry="height:0.749;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-10.288 4.146 -8.968" rotation="79.35465462561902 -52.71211715203574 -104.22102293429674" geometry="height:0.49;radius:0.03;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-12.154 2.974 -6.805" rotation="82.21944360127314 42.11239794211551 -10.599719209920229" geometry="height:2.429;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-12.334 2.815 -6.547" rotation="66.63499157371474 124.96209511803255 76.08879519337333" geometry="height:2.769;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-12.586 2.637 -6.14" rotation="68.92682275423803 124.7902077794933 79.92761242074984" geometry="height:3.01;radius:0.03;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-9.381 4.571 -10.34" rotation="82.9642887349432 108.8619810748564 -127.99877143222591" geometry="height:0.980;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-9.633 4.567 -10.001" rotation="86.80310596231972 134.8742649737958 -101.87189597426037" geometry="height:1.12;radius:0.03;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-9.747 4.485 -9.779" rotation="86.80310596231972 134.8742649737958 -101.87189597426037" geometry="height:0.77;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-14.158 2.472 -11.591" rotation="86.28744394670198 21.371325758379708 45.43555315387428" geometry="radius:0.07;height:2.81;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-12.596 2.406 -13.712" rotation="88.40738778868602 -168.79336644554053 -118.6022635920804" geometry="height:2.67;radius:0.07;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-10.254 2.456 -14.839" rotation="88.40738778868602 162.26164758104912 -118.6022635920804" geometry="radius:0.08;height:2.67;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-7.458 2.548 -14.539" rotation="86.17285238767582 -169.76739469726292 -59.3011317960402" geometry="height:3.05;radius:0.077;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-5.325 2.562 -12.301" rotation="86.17285238767582 142.43730786952267 -59.3011317960402" geometry="height:3.429;radius:0.077;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-4.934 2.385 -9.304" rotation="86.40203550572814 90.58462741018315 -78.89628838951435" geometry="height:2.89;radius:0.075;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-6.239 3.087 -9.485" rotation="89.03764136332994 -151.94840726869433 38.9038342893829" geometry="height:2.17;radius:0.03;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-5.675 2.824 -9.428" rotation="89.03764136332994 -151.94840726869433 38.9038342893829" geometry="height:2.41;radius:0.03;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-5.843 2.443 -7.042" rotation="86.40203550572814 64.62963929075686 -78.89628838951435" geometry="height:2.419;radius:0.08;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-7.665 2.463 -5.546" rotation="86.40203550572814 37.757918699121255 -78.89628838951435" geometry="height:2.49;radius:0.09;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-9.648 2.463 -4.625" rotation="86.40203550572814 34.54935504638864 -78.89628838951435" geometry="height:1.81;radius:0.08;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-14.24 2.398 -8.694" rotation="86.68851440329355 92.64727547265412 74.71369648505936" geometry="height:3.32;radius:0.07;primitive:cylinder" material="src:#wood1"></a-entity>
+        <a-entity position="-12.775 2.431 -5.758" rotation="86.68851440329355 109.95060088560498 74.71369648505936" geometry="primitive:cylinder;height:3.32;radius:0.07" material="src:#wood2"></a-entity>
+        <a-entity position="-8.349 3.945 -8.955" rotation="74.82828804408551 -152.0629988277205 70.18732990352585" geometry="primitive:cylinder;height:0.85;radius:0.03" material="src:#wood1"></a-entity>                                                                                                                                   
+        <a-entity position="-8.059 3.758 -8.704" rotation="74.82828804408551 -144.67184327053286 70.18732990352585" geometry="height:1.06;primitive:cylinder;radius:0.03" material="src:#wood2"></a-entity>  
+        <a-entity position="-7.659 3.539 -8.418" rotation="84.16750010471793 79.35465462561902 -64.45775195221762" geometry="height:1.28;radius:0.03;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="-10.432 4.223 -9.631" rotation="83.93831698666561 176.9866629159113 168.44959176846203" geometry="primitive:cylinder;height:0.971;radius:0.03" material="src:#wood1"></a-entity>
+        <a-entity position="-9.957 4.498 -10.485" rotation="87.54795109598979 94.88181087366432 149.25550563157944" geometry="primitive:cylinder;height:0.6;radius:0.03" material="src:#wood2"></a-entity>
+          <!--turf-->
+        <a-entity position="-5.331 2.57 -6.986" rotation="-75.63 49.675 5.099" geometry="depth:0.1;height:1.09;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-4.967 2.612 -7.595" rotation="-75.63042895726866 56.14986392282068 5.099324376664327" geometry="depth:0.1;height:1.09;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-4.657 2.579 -8.291" rotation="-75.63042895726866 61.65025875607658 5.099324376664327" geometry="depth:0.1;height:1.09;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-4.413 2.563 -8.976" rotation="-75.63042895726866 69.78625944693427 5.099324376664327" geometry="depth:0.1;height:1.09;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-4.285 2.583 -9.673" rotation="-75.63042895726866 75.68772473678175 5.099324376664327" geometry="depth:0.1;height:1.09;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-4.185 2.563 -10.379" rotation="-75.63042895726866 80.55786599539374 5.099324376664327" geometry="depth:0.1;height:1.09;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-4.185 2.548 -11.102" rotation="-75.63042895726866 84.79775367936183 5.099324376664327" geometry="depth:0.1;height:1.09;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-4.297 2.533 -11.81" rotation="-75.63042895726866 92.64727547265412 5.099324376664327" geometry="depth:0.1;height:1.09;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-4.506 2.546 -12.462" rotation="-75.63042895726866 107.6014739255686 5.099324376664327" geometry="depth:0.1;height:1.09;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-4.748 2.608 -12.946" rotation="-75.63042895726866 117.45634800181875 5.099324376664327" geometry="depth:0.1;height:1.09;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-5.175 2.627 -13.519" rotation="-75.63042895726866 124.33184154338863 5.099324376664327" geometry="depth:0.1;height:1.09;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-5.692 2.595 -13.984" rotation="-75.63042895726866 136.70772991821443 5.099324376664327" geometry="depth:0.1;height:1.09;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-6.299 2.606 -14.366" rotation="-75.63042895726866 144.09888547540206 5.099324376664327" geometry="depth:0.1;height:1.09;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-6.986 2.636 -14.683" rotation="-78.32333059438353 140.14547668899937 15.52715624804531" geometry="depth:0.1;height:1.09;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-7.705 2.658 -14.93" rotation="-78.32333059438353 145.35939262468986 15.52715624804531" geometry="depth:0.1;height:1.09;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-8.4 2.627 -15.072" rotation="-78.32333059438353 156.36018229120165 15.52715624804531" geometry="depth:0.1;height:1.09;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-9.856 2.663 -15.095" rotation="-72.42186530453606 -179.73686033253924 3.1512678732195276" geometry="depth:0.1;height:1.09;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-11.907 2.734 -14.423" rotation="-69.55707632888193 -153.95375955165218 -0.34377467707849396" geometry="depth:0.1;height:1.09;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-10.576 2.663 -14.972" rotation="-66.63499157371474 -172.1165216572993 3.20856365273261" geometry="depth:0.1;height:1.09;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-11.907 2.734 -14.423" rotation="-66.63499157371474 -157.27691476341099 3.20856365273261" geometry="depth:0.1;height:1.09;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-12.52 2.734 -14.077" rotation="-66.63499157371474 -150.85978745794574 3.20856365273261" geometry="depth:0.1;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-12.998 2.734 -13.636" rotation="-66.86417469176708 -149.0836182930402 12.08940947726037" geometry="depth:0.1;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-13.511 2.734 -13.114" rotation="-66.86417469176708 -143.46863190075814 12.08940947726037" geometry="depth:0.1;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-13.852 2.734 -12.738" rotation="-66.86417469176708 -136.02018056405745 12.08940947726037" geometry="depth:0.1;height:1.1;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-14.131 2.734 -12.214" rotation="-66.86417469176708 -132.69702535229865 12.08940947726037" geometry="depth:0.1;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-14.385 2.734 -11.556" rotation="-66.86417469176708 -119.28981294623739 12.08940947726037" geometry="depth:0.1;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-14.565 2.734 -10.848" rotation="-69.21330165180345 -95.9131349048998 -3.3804509912718568" geometry="depth:0.1;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-14.604 2.734 -10.172" rotation="-69.21330165180345 -90.06896539456541 -3.3804509912718568" geometry="depth:0.1;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-11.226 2.734 -14.645" rotation="-69.55707632888193 -153.95375955165218 -0.34377467707849396" geometry="depth:0.1;height:1.09;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-9.081 2.663 -15.095" rotation="-72.42186530453606 -179.73686033253924 3.1512678732195276" geometry="depth:0.1;height:1.09;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-14.516 2.734 -9.441" rotation="-72.70834420210146 -82.21944360127314 -4.698253920072751" geometry="depth:0.1;height:1.18;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-14.305 2.734 -8.775" rotation="-71.21865393476133 -78.95358416902744 5.557690612768986" geometry="depth:0.1;height:1.18;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-14.082 2.734 -8.075" rotation="-69.3851889903427 -80.78704911344607 5.901465289847479" geometry="depth:0.1;height:1.1;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-13.814 2.734 -7.367" rotation="-73.05211887917996 -80.15679553880217 11.688339020668794" geometry="depth:0.1;height:1.1;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-13.545 2.698 -6.688" rotation="-68.640 -67.437 0.229" geometry="depth:0.1;height:1.1;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-13.154 2.700 -6.093" rotation="-69.55707632888193 -65.89014644004466 8.136000690857689" geometry="depth:0.1;height:1.1;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-12.764 2.698 -5.509" rotation="-69.55707632888193 -56.60823015892534 8.136000690857689" geometry="depth:0.1;height:1.1;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-12.272 2.759 -5.039" rotation="-69.55707632888193 -43.773975547994894 8.136000690857689" geometry="depth:0.1;height:1.1;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-11.708 2.765 -4.64" rotation="-69.55707632888193 -31.913749188786856 8.136000690857689" geometry="depth:0.1;height:1.1;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-11.13 2.725 -4.483" rotation="-70.53110458060435 -0.9740282517223996 -3.1512678732195276" geometry="depth:0.1;height:1.1;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-10.404 2.725 -4.388" rotation="-67.89549872300256 7.16197243913529 -3.2658594322456924" geometry="depth:0.1;height:0.9;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-9.676 2.646 -4.481" rotation="-67.4371324868979 24.98095986770389 -10.084057194302488" geometry="depth:0.1;height:0.9;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-8.95 2.646 -4.705" rotation="-67.4371324868979 29.220847551671984 -10.084057194302488" geometry="depth:0.1;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-7.588 2.652 -5.351" rotation="-69.27059743131653 27.38738260725335 -1.8334649444186344" geometry="depth:0.1;height:1.1;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-8.278 2.642 -4.991" rotation="-69.27059743131653 26.241467016991706 -1.8334649444186344" geometry="depth:0.1;height:1.2;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-6.924 2.617 -5.665" rotation="-69.27059743131653 32.02834074781302 -1.8334649444186344" geometry="depth:0.1;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-6.353 2.638 -6.102" rotation="-75.17206272116401 49.67544083784237 -13.693691303626675" geometry="depth:0.1;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-5.864 2.656 -6.525" rotation="-69.27059743131653 46.466877185109766 -1.8334649444186344" geometry="depth:0.1;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-10.125 2.904 -4.853" rotation="-83.19347185299553 23.262086482311425 -19.709748152500318" geometry="depth:0.1;height:0.9;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-9.354 2.881 -4.947" rotation="-83.19347185299553 32.544002763430754 -19.709748152500318" geometry="depth:0.1;height:0.9;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-8.588 2.881 -5.148" rotation="-83.19347185299553 39.304904745974476 -19.709748152500318" geometry="depth:0.1;height:0.9;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-7.908 2.873 -5.534" rotation="-83.19347185299553 45.264 -19.709748152500318" geometry="depth:0.1;height:0.9;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-7.221 2.816 -5.922" rotation="-83.19347185299553 48.12845479098915 -19.709748152500318" geometry="height:1.03;depth:0.1;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-6.622 2.801 -6.441" rotation="-83.19347185299553 57.00930061551691 -19.709748152500318" geometry="height:0.97;depth:0.1;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-6.102 2.837 -6.968" rotation="-83.19347185299553 68.58304807715955 -19.709748152500318" geometry="depth:0.1;height:0.97;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-5.658 2.749 -7.534" rotation="-83.19347185299553 68.58304807715955 -19.709748152500318" geometry="height:1.03;depth:0.1;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-5.188 2.749 -8.17" rotation="-83.19347185299553 83.70913386861328 -19.709748152500318" geometry="height:0.94;depth:0.1;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-4.894 2.749 -8.914" rotation="-83.19347185299553 88.92304980430377 -19.709748152500318" geometry="height:0.99;depth:0.1;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-4.71 2.749 -9.658" rotation="-83.19347185299553 95.39747288928207 -19.709748152500318" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-4.635 2.749 -10.416" rotation="-83.19347185299553 110.23707978317039 -19.709748152500318" geometry="depth:0.1;height:0.991;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-4.69 2.749 -11.212" rotation="-83.19347185299553 118.54496781256732 -19.709748152500318" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-4.861 2.749 -11.979" rotation="-83.19347185299553 128.62902500686982 -19.709748152500318" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-5.139 2.749 -12.699" rotation="-83.19347185299553 134.30130717866496 -19.709748152500318" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-5.523 2.749 -13.385" rotation="-83.19347185299553 141.6924627358526 -19.709748152500318" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-6.05 2.749 -14.018" rotation="-83.19347185299553 155.38615403947927 -19.709748152500318" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-6.782 2.749 -14.278" rotation="-83.19347185299553 175.95533888467583 -19.709748152500318" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-7.521 2.761 -14.534" rotation="-83.19347185299553 -178.41905740373835 -19.709748152500318" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-8.317 2.761 -14.723" rotation="-83.19347185299553 -168.79336644554053 -19.709748152500318" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-8.96 2.827 -14.693" rotation="-83.19347185299553 -168.79336644554053 -19.709748152500318" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-9.718 2.827 -14.693" rotation="-83.19347185299553 -154.06835111067838 -19.709748152500318" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-10.476 2.902 -14.603" rotation="-83.19347185299553 -145.98964619933375 -19.709748152500318" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-11.215 2.902 -14.329" rotation="-83.19347185299553 -141.6924627358526 -19.709748152500318" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-11.823 2.913 -14.117" rotation="-83.19347185299553 -141.6924627358526 -19.709748152500318" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-12.472 2.995 -13.615" rotation="-83.19347185299553 -129.03009546346138 -19.709748152500318" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-13.085 2.995 -13.121" rotation="-83.19347185299553 -118.02930579694959 -19.709748152500318" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-13.617 2.995 -12.508" rotation="-83.19347185299553 -109.5495304290134 -19.709748152500318" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-13.983 2.995 -11.77" rotation="-83.19347185299553 -95.34017710976899 -19.709748152500318" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-14.19 2.995 -11" rotation="-83.19347185299553 -83.59454230958711 -19.709748152500318" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-14.29 2.995 -10.213" rotation="-83.19347185299553 -73.91155557187619 -19.709748152500318" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-13.905 2.925 -8.677" rotation="-83.19347185299553 -51.27972266420868 -19.709748152500318" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-13.62 2.906 -7.944" rotation="-83.19347185299553 -45.43555315387428 -19.709748152500318" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-13.26 2.95 -7.202" rotation="-83.19347185299553 -45.43555315387428 -19.709748152500318" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-13 2.926 -6.418" rotation="-83.19347185299553 -36.89848200642502 -19.709748152500318" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-12.562 2.933 -5.782" rotation="-83.19347185299553 -29.10625599264582 -19.709748152500318" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-12.008 2.951 -5.3" rotation="-83.19347185299553 -24.121523175007656 -19.709748152500318" geometry="height:0.99;depth:0.1;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-11.407 3.027 -4.933" rotation="-83.19347185299553 -3.666929888837269 -19.709748152500318" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-10.866 2.963 -4.857" rotation="-83.19347185299553 12.891550390443523 -19.709748152500318" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-14.05 2.925 -9.466" rotation="-83.19347185299553 -60.103272709223354 -19.709748152500318" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-13.349 3.139 -9.466" rotation="-77.8076685787658 -73.73966823333694 -5.844169510334397" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-13.422 3.164 -10.203" rotation="-77.8076685787658 -85.82907771059732 -5.844169510334397" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-13.372 3.198 -10.944" rotation="-77.8076685787658 -94.65262775561199 -5.844169510334397" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-13.192 3.209 -11.655" rotation="-77.8076685787658 -105.93989631968921 -5.844169510334397" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-12.842 3.209 -12.3" rotation="-77.8076685787658 -117.80012267889725 -5.844169510334397" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-12.363 3.209 -12.849" rotation="-77.8076685787658 -128.3998418888175 -5.844169510334397" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-11.794 3.128 -13.379" rotation="-77.8076685787658 -142.20812475147034 -5.844169510334397" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-11.152 3.096 -13.769" rotation="-77.8076685787658 -149.37009719060563 -5.844169510334397" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-10.458 3.116 -13.967" rotation="-77.8076685787658 -164.20970408449395 -5.844169510334397" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-9.673 3.049 -13.967" rotation="-77.8076685787658 -164.20970408449395 -5.844169510334397" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-8.941 3.042 -14.098" rotation="-77.8076685787658 -174.35105705830952 -5.844169510334397" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-8.239 2.955 -14.098" rotation="-77.8076685787658 178.5909447422776 -5.844169510334397" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-7.491 2.977 -13.967" rotation="-77.8076685787658 172.28840899583855 -5.844169510334397" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-6.991 2.952 -13.724" rotation="-77.8076685787658 162.20435180153606 -5.844169510334397" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-6.312 2.953 -13.393" rotation="-77.8076685787658 150.4014212218411 -5.844169510334397" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-5.9 2.953 -12.945" rotation="-77.8076685787658 130.34789839226227 -5.844169510334397" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-5.463 2.953 -12.269" rotation="-77.8076685787658 124.44643310241482 -5.844169510334397" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-5.288 2.953 -11.555" rotation="-77.8076685787658 110.63815023976197 -5.844169510334397" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-5.288 2.953 -10.819" rotation="-77.8076685787658 95.9131349048998 -5.844169510334397" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-5.34 2.953 -10.066" rotation="-77.8076685787658 88.92304980430377 -5.844169510334397" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-5.513 2.953 -9.342" rotation="-77.8076685787658 81.99026048322081 -5.844169510334397" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-5.803 2.953 -8.634" rotation="-77.8076685787658 72.02079484794447 -5.844169510334397" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-6.114 2.953 -7.936" rotation="-77.8076685787658 65.37448442442692 -5.844169510334397" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-6.539 2.996 -7.263" rotation="-77.8076685787658 61.30648407899809 -5.844169510334397" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-7.119 2.996 -6.801" rotation="-77.86496435827888 52.826708711061904 -8.136000690857689" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-7.736 2.996 -6.372" rotation="-77.86496435827888 39.705975202566044 -8.136000690857689" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-8.408 3.077 -6.064" rotation="-77.86496435827888 32.48670698391767 -8.136000690857689" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-9.1 3.077 -5.776" rotation="-77.86496435827888 26.757129032609445 -8.136000690857689" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-9.777 3.076 -5.574" rotation="-77.86496435827888 16.902254956359286 -8.136000690857689" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-10.471 3.122 -5.502" rotation="-77.86496435827888 6.7609019825437136 -8.136000690857689" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-11.146 3.16 -5.636" rotation="-77.86496435827888 -7.734930234266114 -8.136000690857689" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-11.79 3.119 -5.964" rotation="-77.86496435827888 -24.236114734033823 -8.136000690857689" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-12.342 3.119 -6.415" rotation="-77.86496435827888 -39.82056676159221 -8.136000690857689" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-12.674 3.104 -7.052" rotation="-77.86496435827888 -53.97262430132354 -8.136000690857689" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-12.957 3.119 -7.745" rotation="-77.86496435827888 -64.05668149562604 -8.136000690857689" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-13.1 3.07 -8.302" rotation="-77.86496435827888 -64.05668149562604 -8.136000690857689" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-13.205 3.126 -8.788" rotation="-77.86496435827888 -70.13003412401277 -8.136000690857689" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-10.824 3.342 -6.201" rotation="-77.86496435827888 -7.734930234266114 -8.136000690857689" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity> 
+        <a-entity position="-11.448 3.342 -6.504" rotation="-77.86496435827888 -22.803720246206765 -8.136000690857689" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-11.82 3.366 -7.043" rotation="-77.86496435827888 -41.94051060357626 -8.136000690857689" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-12.165 3.366 -7.665" rotation="-77.86496435827888 -59.41572335506636 -8.136000690857689" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-12.432 3.318 -8.386" rotation="-77.86496435827888 -66.46310423517549 -8.136000690857689" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-12.613 3.31 -9.118" rotation="-77.86496435827888 -69.44248476985577 -8.136000690857689" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-12.765 3.438 -9.877" rotation="-72.30727374550989 -63.88479415708679 -14.094761760218251" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-12.765 3.431 -10.535" rotation="-71.73431595037907 -104.0491355957575 7.906817572805362" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-12.603 3.481 -11.274" rotation="-71.73431595037907 -114.93533370324313 7.906817572805362" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-12.26 3.481 -11.95" rotation="-71.73431595037907 -130.86356040788002 7.906817572805362" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-11.813 3.481 -12.499" rotation="-71.73431595037907 -144.38536437296744 7.906817572805362" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-11.272 3.356 -12.991" rotation="-71.73431595037907 -154.75590046483535 7.906817572805362" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-10.598 3.356 -13.259" rotation="-71.73431595037907 -169.48091579969753 7.906817572805362" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-9.854 3.33 -13.386" rotation="-71.73431595037907 -177.6742122700683 7.906817572805362" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-9.098 3.352 -13.399" rotation="-71.73431595037907 175.43967686905808 7.906817572805362" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-8.342 3.268 -13.399" rotation="-71.73431595037907 167.41826773722656 7.906817572805362" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-7.612 3.268 -13.296" rotation="-71.73431595037907 157.04773164535865 7.906817572805362" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-6.956 3.268 -13.004" rotation="-71.73431595037907 140.0308851299732 7.906817572805362" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-6.406 3.257 -12.555" rotation="-71.73431595037907 121.98271458335226 7.906817572805362" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-5.965 3.229 -11.956" rotation="-71.73431595037907 103.76265669819209 7.906817572805362" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-5.729 3.229 -11.22" rotation="-71.73431595037907 94.3088530785335 7.906817572805362" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-5.688 3.195 -10.529" rotation="-71.73431595037907 81.07352801101149 7.906817572805362" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-5.729 3.173 -9.797" rotation="-71.73431595037907 71.9634990684314 7.906817572805362" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-5.92 3.167 -9.103" rotation="-71.73431595037907 61.535667197050415 7.906817572805362" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-6.239 3.173 -8.474" rotation="-71.3332454937875 58.32710354431781 -4.354479242994256" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-6.651 3.21 -7.862" rotation="-71.3332454937875 58.32710354431781 -4.354479242994256" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-7.216 3.21 -7.322" rotation="-71.3332454937875 44.51882068166497 -4.354479242994256" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-7.863 3.21 -6.917" rotation="-71.3332454937875 34.37746770784939 -4.354479242994256" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-8.512 3.282 -6.523" rotation="-71.3332454937875 34.37746770784939 -4.354479242994256" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-9.177 3.282 -6.218" rotation="-71.3332454937875 26.012283898939376 -4.354479242994256" geometry="depth:0.1;height:0.99;width:0.8" material="src:#wall1"></a-entity>
+        <a-entity position="-9.999 3.281 -6.074" rotation="-71.3332454937875 0.5729577951308232 -4.354479242994256" geometry="width:0.93;depth:0.1;height:0.99" material="src:#wall1"></a-entity>
+        <a-entity position="-11.609 3.772 -11.675" rotation="-71.16135815524825 -144.04158969588894 7.906817572805362" geometry="depth:0.1;height:0.99;width:0.81" material="src:#wall1"></a-entity>
+        <a-entity position="-9.999 3.570 -6.903" rotation="-71.3332454937875 0.5729577951308232 -4.354479242994256" geometry="depth:0.1;height:0.99;width:0.93" material="src:#wall1"></a-entity>
+        <a-entity position="-9.278 3.626 -6.903" rotation="-70.93217503719592 18.621128341751756 -9.167324722093172" geometry="depth:0.1;height:0.99;width:0.93" material="src:#wall1"></a-entity>
+        <a-entity position="-8.557 3.531 -7.17" rotation="-70.93217503719592 34.32017192833631 -9.167324722093172" geometry="width:0.81;depth:0.1;height:0.99" material="src:#wall1"></a-entity>
+        <a-entity position="-7.906 3.507 -7.542" rotation="-70.93217503719592 44.919891138256546 -9.167324722093172" geometry="depth:0.1;height:0.99;width:0.81" material="src:#wall1"></a-entity>
+        <a-entity position="-7.304 3.487 -8.021" rotation="-70.93217503719592 55.748793466229095 -9.167324722093172" geometry="depth:0.1;height:0.99;width:0.81" material="src:#wall1"></a-entity>
+        <a-entity position="-6.774 3.441 -8.608" rotation="-70.93217503719592 66.119329558097 -9.167324722093172" geometry="depth:0.1;height:0.99;width:0.81" material="src:#wall1"></a-entity>
+        <a-entity position="-6.385 3.417 -9.287" rotation="-70.93217503719592 78.66710527146203 -9.167324722093172" geometry="depth:0.1;height:0.99;width:0.81" material="src:#wall1"></a-entity>
+        <a-entity position="-6.113 3.398 -10.003" rotation="-70.93217503719592 91.55865566190556 -9.167324722093172" geometry="depth:0.1;height:0.99;width:0.81" material="src:#wall1"></a-entity>
+        <a-entity position="-6.113 3.401 -10.771" rotation="-71.16135815524825 84.16750010471793 7.906817572805362" geometry="depth:0.1;height:0.99;width:0.81" material="src:#wall1"></a-entity>
+        <a-entity position="-6.387 3.482 -11.539" rotation="-71.16135815524825 92.93375437021953 7.906817572805362" geometry="depth:0.1;height:0.99;width:0.81" material="src:#wall1"></a-entity>
+        <a-entity position="-6.693 3.487 -12.212" rotation="-71.16135815524825 110.98192491684047 7.906817572805362" geometry="depth:0.1;height:0.99;width:0.81" material="src:#wall1"></a-entity>
+        <a-entity position="-7.36 3.487 -12.681" rotation="-71.16135815524825 139.3433357758162 7.906817572805362" geometry="depth:0.1;height:0.99;width:0.81" material="src:#wall1"></a-entity>
+        <a-entity position="-8.111 3.487 -12.967" rotation="-71.16135815524825 156.99043586584557 7.906817572805362" geometry="depth:0.1;height:0.99;width:0.81" material="src:#wall1"></a-entity>
+        <a-entity position="-8.935 3.572 -12.967" rotation="-71.16135815524825 173.94998660171794 7.906817572805362" geometry="depth:0.1;height:0.99;width:0.81" material="src:#wall1"></a-entity>
+        <a-entity position="-9.7 3.667 -12.626" rotation="-71.16135815524825 173.94998660171794 7.906817572805362" geometry="depth:0.1;height:0.99;width:0.81" material="src:#wall1"></a-entity>
+        <a-entity position="-10.408 3.667 -12.509" rotation="-71.16135815524825 -169.5382115792106 7.906817572805362" geometry="depth:0.1;height:0.99;width:0.81" material="src:#wall1"></a-entity>
+        <a-entity position="-11 3.772 -12.148" rotation="-71.16135815524825 -154.9277878033746 7.906817572805362" geometry="depth:0.1;height:0.99;width:0.81" material="src:#wall1"></a-entity>
+        <a-entity position="-12.065 3.719 -11.131" rotation="-71.16135815524825 -119.57629184380282 7.906817572805362" geometry="depth:0.1;height:0.99;width:0.81" material="src:#wall1"></a-entity>
+        <a-entity position="-12.144 3.69 -10.381" rotation="-71.16135815524825 -105.71071320163688 7.906817572805362" geometry="depth:0.1;height:0.99;width:0.81" material="src:#wall1"></a-entity>
+        <a-entity position="-12.144 3.682 -9.626" rotation="-69.3851889903427 -66.23392111712316 -20.397297506657306" geometry="depth:0.1;height:0.99;width:0.81" material="src:#wall1"></a-entity>
+        <a-entity position="-12.105 3.53 -9.215" rotation="-69.3851889903427 -54.029920080836625 -20.397297506657306" geometry="depth:0.1;height:0.99;width:0.81" material="src:#wall1"></a-entity>
+        <a-entity position="-12.03 3.541 -8.702" rotation="-70.53110458060435 -58.72817400090938 -15.355268909506064" geometry="depth:0.1;height:0.99;width:0.81" material="src:#wall1"></a-entity>
+        <a-entity position="-11.683 3.535 -8.094" rotation="-78.60980949194895 -66.86417469176708 -1.0313240312354817" geometry="depth:0.1;height:0.99;width:0.81" material="src:#wall1"></a-entity>
+        <a-entity position="-11.294 3.535 -7.466" rotation="-78.60980949194895 -50.191102853460116 -1.0313240312354817" geometry="depth:0.1;height:0.99;width:0.81" material="src:#wall1"></a-entity>
+        <a-entity position="-10.723 3.61 -7.062" rotation="-78.60980949194895 -24.17881895452074 -1.0313240312354817" geometry="width:0.9;depth:0.1;height:0.99" material="src:#wall1"></a-entity>
+        <a-entity position="-10.571 3.837 -7.703" rotation="-75.22935850067708 -33.976397251257815 9.11002894258009" geometry="depth:0.1;height:0.99;width:0.9" material="src:#wall1"></a-entity>
+        <a-entity position="-9.733 3.847 -7.512" rotation="-75.22935850067708 -14.839606893888321 9.11002894258009" geometry="depth:0.1;height:0.99;width:0.9" material="src:#wall1"></a-entity>
+        <a-entity position="-8.909 3.827 -7.637" rotation="-75.22935850067708 5.042028597151244 9.11002894258009" geometry="depth:0.1;height:0.99;width:0.9" material="src:#wall1"></a-entity>
+        <a-entity position="-8.109 3.739 -7.796" rotation="-73.28130199723229 32.77318588148309 -5.958761069360562" geometry="depth:0.1;height:0.99;width:0.9" material="src:#wall1"></a-entity>
+        <a-entity position="-7.453 3.709 -8.454" rotation="-73.28130199723229 53.743441183271216 -5.958761069360562" geometry="depth:0.1;height:0.99;width:0.9" material="src:#wall1"></a-entity>
+        <a-entity position="-6.956 3.642 -9.06" rotation="-73.28130199723229 61.249188299485 -5.958761069360562" geometry="depth:0.1;height:0.99;width:0.9" material="src:#wall1"></a-entity>
+        <a-entity position="-6.607 3.606 -9.796" rotation="-73.28130199723229 85.59989459254498 -5.958761069360562" geometry="depth:0.1;height:0.99;width:0.9" material="src:#wall1"></a-entity>
+        <a-entity position="-6.607 3.606 -10.687" rotation="-73.28130199723229 100.4395014864333 -5.958761069360562" geometry="depth:0.1;height:0.99;width:0.9" material="src:#wall1"></a-entity>
+        <a-entity position="-6.887 3.699 -11.5" rotation="-73.28130199723229 116.3104324115571 -5.958761069360562" geometry="depth:0.1;height:0.99;width:0.9" material="src:#wall1"></a-entity>
+        <a-entity position="-7.463 3.781 -11.978" rotation="-73.28130199723229 133.9002367220734 -5.958761069360562" geometry="depth:0.1;height:0.99;width:0.9" material="src:#wall1"></a-entity>
+        <a-entity position="-8.12 3.775 -12.434" rotation="-73.28130199723229 160.19899951857818 -5.958761069360562" geometry="depth:0.1;height:0.99;width:0.9" material="src:#wall1"></a-entity>
+        <a-entity position="-9.011 3.849 -12.434" rotation="-73.28130199723229 -175.8980431051627 -5.958761069360562" geometry="depth:0.1;height:0.99;width:0.9" material="src:#wall1"></a-entity>
+        <a-entity position="-9.811 4.047 -11.955" rotation="-66.69228735322783 -176.47100090029355 3.093972093706445" geometry="depth:0.1;height:0.99;width:0.9" material="src:#wall1"></a-entity>
+        <a-entity position="-10.502 4.107 -11.584" rotation="-66.69228735322783 -158.1936472356203 3.093972093706445" geometry="depth:0.1;height:0.99;width:0.9" material="src:#wall1"></a-entity>
+        <a-entity position="-11.16 4.107 -11.082" rotation="-66.69228735322783 -140.08818090948628 3.093972093706445" geometry="depth:0.1;height:0.99;width:0.9" material="src:#wall1"></a-entity>
+        <a-entity position="-11.472 4.04 -10.51" rotation="-66.69228735322783 -105.25234696553223 3.093972093706445" geometry="depth:0.1;height:0.99;width:0.9" material="src:#wall1"></a-entity>
+        <a-entity position="-11.472 3.97 -9.704" rotation="-74.02614713090236 -83.59454230958711 1.0313240312354817" geometry="depth:0.1;height:0.99;width:0.9" material="src:#wall1"></a-entity>
+        <a-entity position="-11.472 3.827 -8.808" rotation="-70.35921724206509 -71.16135815524825 -11.974817918234205" geometry="depth:0.1;height:0.99;width:0.9" material="src:#wall1"></a-entity>
+        <a-entity position="-11.114 3.77 -8.125" rotation="-73.62507667431078 -56.32175126135992 2.5783100780887045" geometry="depth:0.1;height:0.99;width:0.9" material="src:#wall1"></a-entity>
+        <a-entity position="-9.028 4.128 -11.955" rotation="-66.69228735322783 169.36632424067133 3.093972093706445" geometry="depth:0.1;height:0.99;width:0.9" material="src:#wall1"></a-entity>
+        <a-entity position="-8.243 4.034 -11.747" rotation="-75.51583739824251 150.8024916784327 5.385803274229739" geometry="depth:0.1;height:0.99;width:0.9" material="src:#wall1"></a-entity>
+        <a-entity position="-7.61 4.025 -11.365" rotation="-62.50969544877281 120.49302431601214 13.006141949469688" geometry="depth:0.1;height:0.99;width:0.9" material="src:#wall1"></a-entity>
+        <a-entity position="-7.31 3.99 -10.712" rotation="-62.68158278731207 92.58997969314105 2.635605857601787" geometry="depth:0.1;height:0.99;width:0.9" material="src:#wall1"></a-entity>
+        <a-entity position="-7.31 3.99 -9.931" rotation="-62.68158278731207 73.51048511528461 2.635605857601787" geometry="depth:0.1;height:0.99;width:0.9" material="src:#wall1"></a-entity>
+        <a-entity position="-7.629 3.99 -9.185" rotation="-62.68158278731207 53.285074947166564 2.635605857601787" geometry="depth:0.1;height:0.99;width:0.9" material="src:#wall1"></a-entity>
+        <a-entity position="-8.259 4.099 -8.585" rotation="-62.68158278731207 37.872510258147415 2.635605857601787" geometry="depth:0.1;height:0.99;width:1.09" material="src:#wall1"></a-entity>
+        <a-entity position="-8.92 4.099 -8.137" rotation="-62.68158278731207 8.995437383553925 2.635605857601787" geometry="depth:0.1;height:0.99;width:0.9" material="src:#wall1"></a-entity>
+        <a-entity position="-9.618 4.163 -8.137" rotation="-68.75493541569878 -9.224620501606255 4.755549699585833" geometry="depth:0.1;height:0.99;width:0.9" material="src:#wall1"></a-entity>
+        <a-entity position="-10.418 4.163 -8.323" rotation="-68.75493541569878 -24.236114734033823 4.755549699585833" geometry="depth:0.1;height:0.99;width:0.9" material="src:#wall1"></a-entity>
+        <a-entity position="-11.021 4.061 -8.754" rotation="-64.62963929075686 -64.40045617270454 4.2398876839680915" geometry="width:1.31;depth:0.1;height:0.99" material="src:#wall1"></a-entity>
+        <a-entity position="-9.679 4.479 -8.862" rotation="-81.58919002662923 -29.851101126315893 19.251381916395662" geometry="height:1.04;depth:0.1;width:0.9" material="src:#wall1"></a-entity>
+        <a-entity position="-10.341 4.392 -9.192" rotation="-81.58919002662923 -61.30648407899809 19.251381916395662" geometry="height:1.03;depth:0.1;width:0.9" material="src:#wall1"></a-entity>
+        <a-entity position="-10.798 4.302 -9.734" rotation="-72.02079484794447 -88.57927512722527 20.855663742761966" geometry="height:0.99;depth:0.1;width:0.9" material="src:#wall1"></a-entity>
+        <a-entity position="-10.882 4.367 -10.423" rotation="-71.39054127330057 -100.55409304545947 5.901465289847479" geometry="height:0.96;depth:0.1;width:0.9" material="src:#wall1"></a-entity>
+        <a-entity position="-10.399 4.37 -11.036" rotation="-71.39054127330057 -135.33263120990046 5.901465289847479" geometry="height:0.96;depth:0.1;width:0.9" material="src:#wall1"></a-entity>
+        <a-entity position="-9.857 4.432 -11.253" rotation="-71.39054127330057 -177.21584603396363 5.901465289847479" geometry="depth:0.1;height:0.96;width:0.9" material="src:#wall1"></a-entity>
+        <a-entity position="-9.039 4.432 -11.253" rotation="-71.39054127330057 170.28305671288066 5.901465289847479" geometry="depth:0.1;height:0.96;width:0.9" material="src:#wall1"></a-entity>
+        <a-entity position="-8.476 4.389 -11.006" rotation="-71.39054127330057 132.41054645473324 5.901465289847479" geometry="depth:0.1;height:0.96;width:0.9" material="src:#wall1"></a-entity>
+        <a-entity position="-8.031 4.429 -10.612" rotation="-71.39054127330057 94.25155729902042 5.901465289847479" geometry="depth:0.1;height:0.96;width:0.9" material="src:#wall1"></a-entity>
+        <a-entity position="-8.105 4.429 -9.911" rotation="-71.39054127330057 63.48372370049522 5.901465289847479" geometry="depth:0.1;height:0.96;width:0.9" material="src:#wall1"></a-entity>
+        <a-entity position="-8.443 4.429 -9.39" rotation="-71.39054127330057 49.61814505832929 5.901465289847479" geometry="depth:0.1;height:0.96;width:0.9" material="src:#wall1"></a-entity>
+        <a-entity position="-8.99 4.452 -8.86" rotation="-71.39054127330057 27.61656572530568 5.901465289847479" geometry="depth:0.1;height:0.96;width:0.9" material="src:#wall1"></a-entity>
+        <a-entity position="-9.229 4.781 -9.379" rotation="-75.859612075321 34.83583394395405 -16.386592940741544" geometry="depth:0.1;height:1.04;width:0.54" material="src:#wall1"></a-entity>
+        <a-entity position="-9.679 4.666 -9.411" rotation="-71.84890750940524 -13.521803965087427 2.521014298575622" geometry="width:0.7;height:1.04;depth:0.1" material="src:#wall1"></a-entity>
+        <a-entity position="-10.115 4.673 -9.602" rotation="-63.139949023416726 -51.909976238852586 5.844169510334397" geometry="width:0.66;height:1.04;depth:0.1" material="src:#wall1"></a-entity>
+        <a-entity position="-10.27 4.673 -10.019" rotation="-63.139949023416726 -78.78169683048819 5.844169510334397" geometry="depth:0.1;height:1.04;width:0.66" material="src:#wall1"></a-entity>
+        <a-entity position="-10.27 4.673 -10.389" rotation="-63.139949023416726 -110.58085446024889 5.844169510334397" geometry="depth:0.1;height:1.04;width:0.66" material="src:#wall1"></a-entity>
+        <a-entity position="-9.951 4.673 -10.756" rotation="-63.139949023416726 -143.6405192392974 5.844169510334397" geometry="depth:0.1;height:1.04;width:0.66" material="src:#wall1"></a-entity>
+        <a-entity position="-9.625 4.673 -10.828" rotation="-63.139949023416726 179.2784940964346 5.844169510334397" geometry="depth:0.1;height:1.04;width:0.66" material="src:#wall1"></a-entity>
+        <a-entity position="-9.176 4.673 -10.777" rotation="-63.139949023416726 146.73449133300383 5.844169510334397" geometry="depth:0.1;height:1.04;width:0.66" material="src:#wall1"></a-entity>
+        <a-entity position="-8.851 4.745 -10.504" rotation="-75.859612075321 132.2959548957071 -16.386592940741544" geometry="depth:0.1;height:1.04;width:0.66" material="src:#wall1"></a-entity>
+        <a-entity position="-8.823 4.745 -10.111" rotation="-75.859612075321 99.522769014224 -16.386592940741544" geometry="depth:0.1;height:1.04;width:0.66" material="src:#wall1"></a-entity>
+        <a-entity position="-8.862 4.682 -9.606" rotation="-75.859612075321 64.05668149562604 -16.386592940741544" geometry="width:0.55;height:1.04;depth:0.1" material="src:#wall1"></a-entity>
+        <a-entity position="-9.539 5.01 -10.13" geometry="height:0.22;radiusBottom:0.5;primitive:cone" material="src:#wall1"></a-entity>
+        <a-entity position="-9.606 4.835 -9.379" rotation="-75.859612075321 4.755549699585833 -16.386592940741544" geometry="depth:0.1;height:1.04;width:0.54" material="src:#wall1"></a-entity>
+<!--small house door-->
+        <a-entity position="-11.765 1.156 -3.691" rotation="-5.042028597151244 -57.3530752925954 -0.17188733853924698" geometry="depth:0.06;height:2.2" material="src:#wall2"></a-entity>
+<!--big house posts-->
+        <a-entity position="4.19 1.234 -2.9" geometry="radius:0.3;height:2.5;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="2.257 1.234 -6.832" geometry="radius:0.3105;height:2.5;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="3.549 1.234 -9.932" geometry="radius:0.32;height:2.5;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="5.626 1.234 -12.548" geometry="radius:0.35;height:2.5;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="8.466 1.234 -12.802" geometry="radius:0.29;height:2.5;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="11.006 1.234 -8.294" geometry="radius:0.4;height:2.5;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="11.463 1.234 -4.94" geometry="radius:0.35;height:2.5;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="7.441 1.234 -0.936" geometry="primitive:cylinder;height:2.5;radius:0.3" material="src:#wood2"></a-entity>
+        <a-entity position="9.466 2.576 -2.94" rotation="90.01166961505233 -45.378257374361205 0" geometry="radius:0.15;height:6.3;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="11.272 2.576 -6.703" rotation="90.01166961505233 7.62033867523995 0" geometry="height:3.5;radius:0.15;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="9.739 2.576 -10.625" rotation="90.01166961505233 31.28349561414295 0" geometry="height:5;radius:0.15;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="7.016 2.576 -12.748" rotation="90.01166961505233 94.99640243269049 0" geometry="height:3;radius:0.15;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="4.511 2.576 -11.229" rotation="90.01166961505233 -40 0" geometry="height:3.2;radius:0.15;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="2.891 2.576 -8.419" rotation="90.01166961505233 -20 0" geometry="primitive:cylinder;height:3.2;radius:0.15" material="src:#wood2"></a-entity>
+        <a-entity position="3.217 2.576 -4.866" rotation="90.01166961505233 26 0" geometry="height:4.3;radius:0.15;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="5.767 2.576 -1.946" rotation="90.01166961505233 60 0" geometry="height:3.8;radius:0.15;primitive:cylinder" material="src:#wood2"></a-entity>
+        <a-entity position="6.778 1.234 -7.106" geometry="height:2.7;radius:0.2;primitive:cylinder" material="src:#wood1"></a-entity>
+<!--big house bank-->
+        <a-entity position="7.343 0 -6.895" rotation="89.83978227651309 -81.53189424711614 0" geometry="arc:25;radius:7;primitive:torus" material="src:#brown"></a-entity>
+        <a-entity position="6.099 0 -7.651" rotation="89.83978227651309 -54.029920080836625 0" geometry="radius:8;arc:20;primitive:torus" material="src:#brown"></a-entity>
+        <a-entity position="7.967 0 -5.295" rotation="89.83978227651309 -36.89848200642502 0" geometry="radius:5;arc:20;primitive:torus" material="src:#brown"></a-entity>
+        <a-entity position="4.068 0 -8.424" rotation="89.782486497 -29.507326449237397 0" geometry="arc:10;radius:10;primitive:torus" material="src:#brown"></a-entity>
+        <a-entity position="4.265 0 -8.75" rotation="89.782486497 -22.230762451075943 0" geometry="arc:10;radius:10;primitive:torus" material="src:#brown"></a-entity>
+        <a-entity position="4.275 0 -8.778" rotation="89.782486497 -12.547775713365029 0" geometry="primitive:torus;arc:10;radius:10" material="src:#brown"></a-entity>
+        <a-entity position="4.173 0 -8.268" rotation="89.782486497 -0.34377467707849396 0" geometry="primitive:torus;arc:10;radius:10" material="src:#brown"></a-entity>
+        <a-entity position="6.17 0 -8.411" rotation="89.782486497 10.198648753328653 0" geometry="radius:8;arc:12;primitive:torus" material="src:#brown"></a-entity>
+        <a-entity position="6.229 0 -8.108" rotation="89.782486497 22.230762451075943 0" geometry="arc:10;radius:8;primitive:torus" material="src:#brown"></a-entity>
+        <a-entity position="7.867 0 -8.164" rotation="89.782486497 36.66929888837269 0" geometry="radius:6.48;arc:10;primitive:torus" material="src:#brown"></a-entity>
+        <a-entity position="6.503 0 -7.462" rotation="89.782486497 49.61814505832929 0" geometry="radius:8;arc:15;primitive:torus" material="src:#brown"></a-entity>
+        <a-entity position="6.503 0 -7.462" rotation="89.782486497 49.61814505832929 0" geometry="radius:8;arc:15;primitive:torus" material="src:#brown"></a-entity>
+        <a-entity position="5.089 0 -0.206" rotation="89.782486497 76.31797831142566 0" geometry="primitive:torus;arc:8;radius:15" material="src:#brown"></a-entity><a-entity position="8.198 0 -8.657" rotation="89.782486497 68.58304807715955 0" geometry="radius:6;primitive:torus;arc:15" material="src:#brown"></a-entity>
+        <a-entity position="5.355 0 -0.183" geometry="radius:0.4;primitive:sphere" material="src:#brown"></a-entity>
+        <a-entity position="8.666 0 -14.786" geometry="primitive:sphere;radius:0.4" material="src:#brown" rotation="90 0 0"></a-entity>
+
+<!--wood pile-->
+      <a-entity position="7.441 0.138 8.988" geometry="height:3.2;radius:0.12;primitive:cylinder" material="src:#wood1" rotation="90.01166961505233 85.48530303351883 0"></a-entity>
+      <a-entity position="7.441 0.138 8.988" geometry="height:3.2;radius:0.12;primitive:cylinder" material="src:#wood2" rotation="90.01166961505233 85.48530303351883 0"></a-entity>
+      <a-entity position="7.956 0.114 8.551" geometry="radius:0.09;height:3.3;primitive:cylinder" material="src:#wood1" rotation="90.01166961505233 82.90699295543013 0"></a-entity>
+      <a-entity position="7.724 0.114 8.302" geometry="height:2.8;radius:0.08;primitive:cylinder" material="src:#wood1" rotation="90.01166961505233 84.74045789984876 0"></a-entity>
+      <a-entity position="8.433 0.114 8.142" geometry="radius:0.06;height:3.3;primitive:cylinder" material="src:#wood2" rotation="90.01166961505233 82.21944360127314 0"></a-entity>
+      <a-entity position="8.433 0.114 6.268" geometry="height:2.9;radius:0.1;primitive:cylinder" material="src:#wood2" rotation="90.01166961505233 71.44783705281367 0"></a-entity>
+      <a-entity position="8.433 0.114 6.268" geometry="height:2.9;radius:0.1;primitive:cylinder" material="src:#wood1" rotation="90.01166961505233 71.44783705281367 0"></a-entity>
+      <a-entity position="8.433 0.152 7.123" geometry="radius:0.09;height:4;primitive:cylinder" material="src:#wood1" rotation="90.01166961505233 67.15065358933248 0"></a-entity>
+      <a-entity position="8.433 0.152 7.576" geometry="radius:0.08;height:4;primitive:cylinder" material="src:#wood1" rotation="90.01166961505233 70.989470816709 0"></a-entity>
+      <a-entity position="8.433 0.274 7.576" geometry="radius:0.07;height:3.8;primitive:cylinder" material="src:#wood1" rotation="86.11555660816272 -179.8514518915654 118.83144671013272"></a-entity>
+      <a-entity position="8.527 0.138 9.36" geometry="radius:0.15;height:3;primitive:cylinder" material="src:#wood2" rotation="90.01166961505233 89.55330337894766 0"></a-entity>
+      <a-entity position="8.066 0.138 9.707" geometry="radius:0.14;height:3;primitive:cylinder" material="src:#wood1" rotation="90.01166961505233 89.55330337894766 0"></a-entity>
+      <a-entity position="8.118 0.234 5.819" geometry="primitive:cylinder;height:3;radius:0.05" material="src:#wood2" rotation="82.73510561689088 -53.1704833881404 16.214705602202297"></a-entity>
+  
+  </a-scene>
     </body>
 
 </html>
