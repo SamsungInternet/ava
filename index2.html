@@ -8,8 +8,7 @@
     <script src="js/aframe-master.min.js"></script>
     <script src="js/aframe-look-at-component.min.js"></script>
     <script src="js/aframe-particle-system-component.min.js"></script>
-    <script src="js/ava.js"></script>
-    <script src="js/ava-environment.js"></script>
+    
     <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -46,12 +45,6 @@
           </a-entity>
         </a-entity>
         
-        <a-sky src="#bg" theta-start="-2"></a-sky>
-        <a-plane src="#ground" height="40" width="40" position="0 0 0" rotation="-90 0 0" material="transparency:true;"></a-plane>
-  
-        <!--cows-->
-        <a-entity position="-14.475 1.014 14.604" geometry="depth:0;height:2.31;width:2.5" material="transparent:true;src:#cow1" look-at="#cam"></a-entity>
-
         <!--SMALL HOUSE BASE-->
         <a-entity position="-9.643 0 -4.495" geometry="primitive:sphere;radius:0.76" material=" src:#brown;repeat:3 3"></a-entity>
         <a-entity position="-12.419 0 -4.954" geometry="primitive:sphere;radius:0.76" material="src:#brown;repeat:3 3"></a-entity>
@@ -64,48 +57,7 @@
         <a-entity position="-8.819 0 -10.936" rotation="90.011669 84.511274 0" geometry="primitive:torus;arc:60;radius:4.5;radiusTubular:0.38" material="repeat:3 3;src:#brown;repeat:4 4"></a-entity>
         <a-entity position="-9.218 0 -10.8" rotation="90.01166961505233 138.99956109873773 0" geometry="radius:4.7;arc:62;primitive:torus;radiusTubular:0.38" material="repeat:4 4;src:#brown;repeat:4 4"></a-entity>
 
-      <!--ENCLOSURE POSTS-->
-        <a-entity position="-16.614 0.493 17.095" geometry="height:1.23;radius:0.12;primitive:cylinder" material="src:#wood1"></a-entity>
-        <a-entity position="-14.726 0.596 17.883" geometry="radius:0.135;height:1.2;primitive:cylinder" material="src:#wood2"></a-entity>
-        <a-entity position="-17.342 0.596 15.65" geometry="radius:0.13;height:1.359;primitive:cylinder" material="src:#wood1"></a-entity>
-        <a-entity position="-17.631 0.596 13.567" geometry="radius:0.12;height:1.318;primitive:cylinder" material="src:#wood2"></a-entity>
-        <a-entity position="-16.901 0.596 11.511" geometry="height:1.258;radius:0.13;primitive:cylinder" material="src:#wood1"></a-entity>
-        <a-entity position="-15.29 0.596 10.037" geometry="radius:0.12;height:1.2598;primitive:cylinder" material="src:#wood2"></a-entity>
-        <a-entity position="-13.053 0.596 9.102" geometry="height:1.1697;radius:0.12;primitive:cylinder" material="src:#wood1"></a-entity>
-        <a-entity position="-11.02 0.596 8.285" geometry="radius:0.14;height:1.1897;primitive:cylinder" material="src:#wood2"></a-entity>
-        <a-entity position="-8.957 0.596 7.579" geometry="radius:0.13;height:1.2198;primitive:cylinder" material="src:#wood1"></a-entity>
-        <a-entity position="-6.648 0.596 7.456" geometry="radius:0.15;height:1.1597;primitive:cylinder" material="src:#wood2"></a-entity>
-        <a-entity position="-4.922 0.688 8.062" geometry="height:1.409;radius:0.12;primitive:cylinder" material="src:#wood1"></a-entity>
-        <a-entity position="-2.856 0.629 10.607" geometry="height:1.339;radius:0.19;primitive:cylinder" material="src:#wood2"></a-entity>
-        <a-entity position="-2.452 0.596 12.702" geometry="height:1.159;radius:0.17;primitive:cylinder" material="src:#wood1"></a-entity>
-        <a-entity position="-2.508 0.596 14.458" geometry="height:1.189;radius:0.13;primitive:cylinder" material="src:#wood2"></a-entity>
-        <a-entity position="-5.412 0.571 16.37" geometry="radius:0.13;height:1.2;primitive:cylinder" material="src:#wood1"></a-entity>
-        <a-entity position="-7.455 0.571 16.949" geometry="primitive:cylinder;height:1.2;radius:0.14" material="src:#wood2"></a-entity>
-        <a-entity position="-9.727 0.571 17.563" geometry="radius:0.13;height:1.2;primitive:cylinder" material="src:#wood1"></a-entity>
-        <a-entity position="-3.768 0.596 15.649" geometry="primitive:cylinder;height:1.189;radius:0.13" material="src:#wood2"></a-entity>
-        <a-entity position="-12.393 0.671 18.007" geometry="height:1.429;radius:0.13;primitive:cylinder" material="src:#wood1"></a-entity>
 
-        <!--ENCLOSURE FENCE-->        
-        <a-entity position="-11.071 0.56 17.798" rotation="0 9.33921206063242 0" geometry="depth:0;height:1.16;width:2.53" material="transparent:true;src:#fence"></a-entity>
-        <a-entity position="-13.551 0.56 17.916" rotation="0 -0.40107045659157625 0" geometry="width:2.12;depth:0;height:1.16" material="transparent:true;src:#fence"></a-entity>
-        <a-entity position="-15.709 0.56 17.528" rotation="0 -22.288058230589023 0" geometry="width:1.84;depth:0;height:1.16" material="transparent:true;src:#fence"></a-entity>
-        <a-entity position="-15.709 0.56 17.528" rotation="0 -22.288058230589023 0" geometry="width:1.84;depth:0;height:1.16" material="transparent:true;src:#fence"></a-entity>
-        <a-entity position="-17.001 0.56 16.381" rotation="0 -64.91611818832227 0" geometry="width:1.5;depth:0;height:1.16" material="transparent:true;src:#fence"></a-entity>
-        <a-entity position="-17.494 0.56 14.586" rotation="0 -83.36535919153478 0" geometry="width:2;depth:0;height:1.16" material="transparent:true;src:#fence"></a-entity>
-        <a-entity position="-17.283 0.574 12.53" rotation="0 -108.9192768543695 0" geometry="depth:0;height:1.16;width:2" material="transparent:true;src:#fence"></a-entity>
-        <a-entity position="-16.128 0.574 10.734" rotation="0 -140.0308851299732 0" geometry="depth:0;height:1.16;width:2" material="transparent:true;src:#fence"></a-entity>
-        <a-entity position="-14.187 0.575 9.538" rotation="0 -158.42283035367262 0" geometry="width:2.2;depth:0;height:1.16" material="transparent:true;src:#fence"></a-entity>
-        <a-entity position="-12.061 0.575 8.67" rotation="0 -157.67798522000254 0" geometry="width:2;depth:0;height:1.16" material="transparent:true;src:#fence"></a-entity>
-        <a-entity position="-9.953 0.575 7.898" rotation="0 -162.6627180376407 0" geometry="width:2;depth:0;height:1.16" material="transparent:true;src:#fence"></a-entity>
-        <a-entity position="-7.785 0.575 7.521" rotation="0 -176.52829667980663 0" geometry="width:2.1;depth:0;height:1.16" material="transparent:true;src:#fence"></a-entity>
-        <a-entity position="-5.817 0.575 7.734" rotation="0 160.94384465224826 0" geometry="width:1.8;depth:0;height:1.16" material="transparent:true;src:#fence"></a-entity>
-        <a-entity position="-2.497 0.575 13.607" rotation="0 87.4906553164767 0" geometry="width:1.5;depth:0;height:1.16" material="transparent:true;src:#fence"></a-entity>
-        <a-entity position="-8.596 0.56 17.29" rotation="0 12.37588837482578 0" geometry="width:2.171;depth:0;height:1.16" material="transparent:true;src:#fence"></a-entity>
-        <a-entity position="-6.449 0.56 16.694" rotation="0 16.55848027928079 0" geometry="width:1.9;depth:0;height:1.16" material="transparent:true;src:#fence"></a-entity>
-        <a-entity position="-3.14 0.56 15.097" rotation="0 44.34693334312572 0" geometry="width:1.5;depth:0;height:1.16" material="transparent:true;src:#fence"></a-entity>
-        <a-entity position="-3.861 0.575 9.323" rotation="0 127.02474318050352 0" geometry="width:3;depth:0;height:1.16" material="transparent:true;src:#fence"></a-entity>
-        <a-entity position="-2.228 0.575 12.432" rotation="9.224620501606255 3.953408786402681 0.6302535746439055" geometry="depth:0;height:1.16;width:1.8" material="transparent:true;src:#fence"></a-entity>
-        <a-entity position="-4.606 0.56 16.059" rotation="0 23.319382261824504 0" geometry="width:1.6;depth:0;height:1.16" material="transparent:true;src:#fence"></a-entity>
         <!--SMALL HOUSE WALLS-->
         <a-entity position="-11.135 1.09 -11.148" rotation="0 6.990085100596043 0" geometry="height:3;thetaLength:45;radius:7;openEnded:true;primitive:cylinder" material="src:#wall2"></a-entity>
         <a-entity position="-10.396 1.09 -10.48" rotation="0 51.2224268846956 0" geometry="thetaLength:65;radius:6;height:3;openEnded:true;primitive:cylinder" material="src:#wall2"></a-entity>
@@ -540,56 +492,7 @@
         <a-entity position="-9.606 4.835 -9.379" rotation="-75.859612075321 4.755549699585833 -16.386592940741544" geometry="depth:0.1;height:1.04;width:0.54" material="src:#wall2"></a-entity>
 <!--small house door-->
         <a-entity position="-11.765 1.156 -3.691" rotation="-5.042028597151244 -57.3530752925954 -0.17188733853924698" geometry="depth:0.06;height:2.2" material="src:#wall2"></a-entity>
-<!--big house posts-->
-        <a-entity position="4.19 1.234 -2.9" geometry="radius:0.3;height:2.5;primitive:cylinder" material="src:#wood2"></a-entity>
-        <a-entity position="2.257 1.234 -6.832" geometry="radius:0.3105;height:2.5;primitive:cylinder" material="src:#wood2"></a-entity>
-        <a-entity position="3.549 1.234 -9.932" geometry="radius:0.32;height:2.5;primitive:cylinder" material="src:#wood2"></a-entity>
-        <a-entity position="5.626 1.234 -12.548" geometry="radius:0.35;height:2.5;primitive:cylinder" material="src:#wood2"></a-entity>
-        <a-entity position="8.466 1.234 -12.802" geometry="radius:0.29;height:2.5;primitive:cylinder" material="src:#wood2"></a-entity>
-        <a-entity position="11.006 1.234 -8.294" geometry="radius:0.4;height:2.5;primitive:cylinder" material="src:#wood2"></a-entity>
-        <a-entity position="11.463 1.234 -4.94" geometry="radius:0.35;height:2.5;primitive:cylinder" material="src:#wood2"></a-entity>
-        <a-entity position="7.441 1.234 -0.936" geometry="primitive:cylinder;height:2.5;radius:0.3" material="src:#wood2"></a-entity>
-        <a-entity position="9.466 2.576 -2.94" rotation="90.01166961505233 -45.378257374361205 0" geometry="radius:0.15;height:6.3;primitive:cylinder" material="src:#wood2"></a-entity>
-        <a-entity position="11.272 2.576 -6.703" rotation="90.01166961505233 7.62033867523995 0" geometry="height:3.5;radius:0.15;primitive:cylinder" material="src:#wood2"></a-entity>
-        <a-entity position="9.739 2.576 -10.625" rotation="90.01166961505233 31.28349561414295 0" geometry="height:5;radius:0.15;primitive:cylinder" material="src:#wood2"></a-entity>
-        <a-entity position="7.016 2.576 -12.748" rotation="90.01166961505233 94.99640243269049 0" geometry="height:3;radius:0.15;primitive:cylinder" material="src:#wood2"></a-entity>
-        <a-entity position="4.511 2.576 -11.229" rotation="90.01166961505233 -40 0" geometry="height:3.2;radius:0.15;primitive:cylinder" material="src:#wood2"></a-entity>
-        <a-entity position="2.891 2.576 -8.419" rotation="90.01166961505233 -20 0" geometry="primitive:cylinder;height:3.2;radius:0.15" material="src:#wood2"></a-entity>
-        <a-entity position="3.217 2.576 -4.866" rotation="90.01166961505233 26 0" geometry="height:4.3;radius:0.15;primitive:cylinder" material="src:#wood2"></a-entity>
-        <a-entity position="5.767 2.576 -1.946" rotation="90.01166961505233 60 0" geometry="height:3.8;radius:0.15;primitive:cylinder" material="src:#wood2"></a-entity>
-        <a-entity position="6.778 1.234 -7.106" geometry="height:2.7;radius:0.2;primitive:cylinder" material="src:#wood1"></a-entity>
-<!--big house bank-->
-        <a-entity position="7.343 0 -6.895" rotation="89.83978227651309 -81.53189424711614 0" geometry="arc:25;radius:7;primitive:torus" material="src:#brown"></a-entity>
-        <a-entity position="6.099 0 -7.651" rotation="89.83978227651309 -54.029920080836625 0" geometry="radius:8;arc:20;primitive:torus" material="src:#brown"></a-entity>
-        <a-entity position="7.967 0 -5.295" rotation="89.83978227651309 -36.89848200642502 0" geometry="radius:5;arc:20;primitive:torus" material="src:#brown"></a-entity>
-        <a-entity position="4.068 0 -8.424" rotation="89.782486497 -29.507326449237397 0" geometry="arc:10;radius:10;primitive:torus" material="src:#brown"></a-entity>
-        <a-entity position="4.265 0 -8.75" rotation="89.782486497 -22.230762451075943 0" geometry="arc:10;radius:10;primitive:torus" material="src:#brown"></a-entity>
-        <a-entity position="4.275 0 -8.778" rotation="89.782486497 -12.547775713365029 0" geometry="primitive:torus;arc:10;radius:10" material="src:#brown"></a-entity>
-        <a-entity position="4.173 0 -8.268" rotation="89.782486497 -0.34377467707849396 0" geometry="primitive:torus;arc:10;radius:10" material="src:#brown"></a-entity>
-        <a-entity position="6.17 0 -8.411" rotation="89.782486497 10.198648753328653 0" geometry="radius:8;arc:12;primitive:torus" material="src:#brown"></a-entity>
-        <a-entity position="6.229 0 -8.108" rotation="89.782486497 22.230762451075943 0" geometry="arc:10;radius:8;primitive:torus" material="src:#brown"></a-entity>
-        <a-entity position="7.867 0 -8.164" rotation="89.782486497 36.66929888837269 0" geometry="radius:6.48;arc:10;primitive:torus" material="src:#brown"></a-entity>
-        <a-entity position="6.503 0 -7.462" rotation="89.782486497 49.61814505832929 0" geometry="radius:8;arc:15;primitive:torus" material="src:#brown"></a-entity>
-        <a-entity position="6.503 0 -7.462" rotation="89.782486497 49.61814505832929 0" geometry="radius:8;arc:15;primitive:torus" material="src:#brown"></a-entity>
-        <a-entity position="5.089 0 -0.206" rotation="89.782486497 76.31797831142566 0" geometry="primitive:torus;arc:8;radius:15" material="src:#brown"></a-entity><a-entity position="8.198 0 -8.657" rotation="89.782486497 68.58304807715955 0" geometry="radius:6;primitive:torus;arc:15" material="src:#brown"></a-entity>
-        <a-entity position="5.355 0 -0.183" geometry="radius:0.4;primitive:sphere" material="src:#brown"></a-entity>
-        <a-entity position="8.666 0 -14.786" geometry="primitive:sphere;radius:0.4" material="src:#brown" rotation="90 0 0"></a-entity>
 
-<!--wood pile-->
-      <a-entity position="7.441 0.138 8.988" geometry="height:3.2;radius:0.12;primitive:cylinder" material="src:#wood1" rotation="90.01166961505233 85.48530303351883 0"></a-entity>
-      <a-entity position="7.441 0.138 8.988" geometry="height:3.2;radius:0.12;primitive:cylinder" material="src:#wood2" rotation="90.01166961505233 85.48530303351883 0"></a-entity>
-      <a-entity position="7.956 0.114 8.551" geometry="radius:0.09;height:3.3;primitive:cylinder" material="src:#wood1" rotation="90.01166961505233 82.90699295543013 0"></a-entity>
-      <a-entity position="7.724 0.114 8.302" geometry="height:2.8;radius:0.08;primitive:cylinder" material="src:#wood1" rotation="90.01166961505233 84.74045789984876 0"></a-entity>
-      <a-entity position="8.433 0.114 8.142" geometry="radius:0.06;height:3.3;primitive:cylinder" material="src:#wood2" rotation="90.01166961505233 82.21944360127314 0"></a-entity>
-      <a-entity position="8.433 0.114 6.268" geometry="height:2.9;radius:0.1;primitive:cylinder" material="src:#wood2" rotation="90.01166961505233 71.44783705281367 0"></a-entity>
-      <a-entity position="8.433 0.114 6.268" geometry="height:2.9;radius:0.1;primitive:cylinder" material="src:#wood1" rotation="90.01166961505233 71.44783705281367 0"></a-entity>
-      <a-entity position="8.433 0.152 7.123" geometry="radius:0.09;height:4;primitive:cylinder" material="src:#wood1" rotation="90.01166961505233 67.15065358933248 0"></a-entity>
-      <a-entity position="8.433 0.152 7.576" geometry="radius:0.08;height:4;primitive:cylinder" material="src:#wood1" rotation="90.01166961505233 70.989470816709 0"></a-entity>
-      <a-entity position="8.433 0.274 7.576" geometry="radius:0.07;height:3.8;primitive:cylinder" material="src:#wood1" rotation="86.11555660816272 -179.8514518915654 118.83144671013272"></a-entity>
-      <a-entity position="8.527 0.138 9.36" geometry="radius:0.15;height:3;primitive:cylinder" material="src:#wood2" rotation="90.01166961505233 89.55330337894766 0"></a-entity>
-      <a-entity position="8.066 0.138 9.707" geometry="radius:0.14;height:3;primitive:cylinder" material="src:#wood1" rotation="90.01166961505233 89.55330337894766 0"></a-entity>
-      <a-entity position="8.118 0.234 5.819" geometry="primitive:cylinder;height:3;radius:0.05" material="src:#wood2" rotation="82.73510561689088 -53.1704833881404 16.214705602202297"></a-entity>
-  
   </a-scene>
     </body>
 
