@@ -57,7 +57,7 @@ h1{
 /* INFO PAGE */
 
 .infobody{
-    background-image: url('/imgs/infobg.jpg');
+    background-image: url('../imgs/infobg.jpg');
     background-repeat: repeat-x;
     background-attachment: fixed;
 }
