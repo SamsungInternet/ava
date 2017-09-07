@@ -6,6 +6,10 @@ body{
     font-family:'Samsung One'; 
 }
 
+h1{
+    font-size: 1.2em;
+}
+
 #splash{
     padding: 1.5em;
     background-color: rgba(255, 255, 255, 0.75);
@@ -16,7 +20,7 @@ body{
 }
 
 #splashContent{
-    max-width: 30em;
+    max-width: 15em;
     margin: auto;
 }
 
@@ -28,16 +32,15 @@ body{
 }
 
 .logo{
-    max-width: 10em;
-
+    max-width: 6em;
 }
 
 .btn{
     border: 2 solid #494032;
-    padding: .5em;
+    padding: .2em;
     border-radius: 1em;
     cursor: pointer;
-    width: 10em;
+    width: 6em;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.5);
 }
@@ -45,3 +48,31 @@ body{
 .footer{
     font-size: 0.8em;
 }
+
+/*big sized screen*/
+@media (min-width: 800px) {
+    
+    h1{
+        font-size: 2em;
+    }
+
+    #splashContent{
+        max-width: 30em;
+        margin: auto;
+    }
+
+    .btn{
+        border: 2 solid #494032;
+        padding: .5em;
+        border-radius: 1em;
+        cursor: pointer;
+        width: 10em;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .logo{
+        max-width: 10em;
+    }
+
+    }
