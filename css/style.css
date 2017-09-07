@@ -60,6 +60,7 @@ h1{
     background-image: url('../imgs/infobg.jpg');
     background-repeat: repeat-x;
     background-attachment: fixed;
+    background-position: center;
 }
 
 .infoImage{
