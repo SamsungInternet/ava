@@ -6,3 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function getRandomArbitrary(min, max) {
     return Math.random() * (max - min) + min;
 }
+
+var hideSplash = function(){
+    document.querySelector('#splash').style.display = 'none';
+};

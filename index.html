@@ -10,10 +10,29 @@
     <script src="js/aframe-particle-system-component.min.js"></script>
     <script src="js/ava.js"></script>
     <script src="js/ava-environment.js"></script>
+    <link rel="stylesheet" href="f/fonts.css">
     <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
+    <div id="splash">
+        <div id="splashContent">
+          <h1>Welcome to the Bronze Age in the North of Scotland!</h1>
+          <p>This cartoon, WebVR experience depicts archaeological information recovered from a 4,250 year old burial of a young woman, known now as Ava, found in Caithness 30 years ago. Recent research by the Achavanich Beaker Burial project has revealed new information about this time and place.</p>
+          <div class="flexRow">
+              <span class="btn"><strong>Learn more</strong></span>
+              <span class="btn" onclick="hideSplash()"><strong>Start</strong></span>
+
+          </div>
+          <!-- <p>Prehistoric pollen was found on the surface of a pot, known as a beaker, buried with Ava. Trees haven’t grown naturally in this part of the world for millennia, but now we know when they did. Also buried with Ava was a bone from a small cow; see if you can spot him! Lastly, the roundhouse is an interpretation of a real excavation of a Bronze Age hut circle at Skaill in Caithness. </p> -->
+          <p class="footer">This experience is brought to you by:</p>
+          <div class="flexRow">
+              <a href="https://achavanichbeakerburial.wordpress.com/"><img src="imgs/logoBeaker.png" class="logo"></a>
+              <a href="https://samsunginter.net"><img src="imgs/logoSamsung.png" class="logo"></a>
+          </div>
+          
+        </div>
+      </div>
     <a-scene id="avascene" ava-environment>
         <a-assets>
             <img id="bg" src="imgs/bg.png">
