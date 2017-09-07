@@ -2,6 +2,11 @@ html{
     color:#494032;
 }
 
+a:link, a:hover, a:visited, a:active{
+    color: #231E17;
+    text-decoration: underline;
+}
+
 body{
     font-family:'Samsung One'; 
 }
@@ -47,6 +52,25 @@ h1{
 
 .footer{
     font-size: 0.8em;
+}
+
+/* INFO PAGE */
+
+.infobody{
+    background-image: url('/imgs/infobg.jpg');
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+}
+
+.infoImage{
+    width: 3em;
+    margin: auto;
+    display: block;
+}
+
+#infoContent{
+    max-width: 30em;
+    margin: auto;
 }
 
 /*big sized screen*/
