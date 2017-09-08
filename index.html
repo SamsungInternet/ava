@@ -57,7 +57,7 @@
             <img id="brown" src="imgs/brown.png">
             <img id="roof" src="imgs/roof.png">
             <img id="cow1" src="imgs/cow1.png">
-            <a-asset-item id="roof1" src="models/roof.gltf"></a-asset-item>
+            <a-asset-item id="roof1" src="models/roof.glb"></a-asset-item>
             <a-asset-item id="ava" src="models/ava.glb"></a-asset-item>
             <audio id="ambient" src="audio/ambient.mp3" preload="auto" loop="true"></audio>
         </a-assets>
@@ -71,8 +71,7 @@
         <a-sky src="#bg" theta-start="-2"></a-sky>
         <a-plane src="#ground" height="40" width="40" position="0 0 0" rotation="-90 0 0" material="transparency:true;"></a-plane>
   
-        <a-gltf-model src="#ava" position="0 .96 0" scale="5 5 5"></a-gltf-model>
-        <a-gltf-model src="#roof2" position="0 0 0" scale="5 5 5"></a-gltf-model>
+        <!-- <a-gltf-model src="#ava" position="0 .96 0" scale="5 5 5"></a-gltf-model> -->
         <!--cows-->
         <a-entity position="-14.475 1.014 14.604" geometry="depth:0;height:2.31;width:2.5" material="transparent:true;src:#cow1" look-at="#cam"></a-entity>
 
@@ -325,7 +324,7 @@
         <a-entity position="-10.432 4.223 -9.631" rotation="83.93831698666561 176.9866629159113 168.44959176846203" geometry="primitive:cylinder;height:0.971;radius:0.03" material="src:#wood1"></a-entity>
         <a-entity position="-9.957 4.498 -10.485" rotation="87.54795109598979 94.88181087366432 149.25550563157944" geometry="primitive:cylinder;height:0.6;radius:0.03" material="src:#wood2"></a-entity>
         <!--turf-->
-        <a-gltf-model src="#roof1" position="-9.556 1.88 -10.125" material="src:#roof"></a-gltf-model>
+        <a-gltf-model src="#roof1" position="-4.883 -1.767 -1.255" rotation="-23.548565379876834 -149.7711676471972 -12.776958831417359" scale="22.5 22.7 22.5" gltf-model="models/roof.glb"></a-gltf-model>
 <!--small house door-->
         <a-entity position="-11.765 1.156 -3.691" rotation="-5.042028597151244 -57.3530752925954 -0.17188733853924698" geometry="depth:0.06;height:2.2" material="src:#wall2"></a-entity>
 <!--big house posts-->
