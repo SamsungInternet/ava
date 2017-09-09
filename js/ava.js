@@ -10,3 +10,7 @@ function getRandomArbitrary(min, max) {
 var hideSplash = function(){
     document.querySelector('#splash').style.display = 'none';
 };
+
+var showSplash = function(){
+    document.querySelector('#splash').style.display = 'block';
+};
